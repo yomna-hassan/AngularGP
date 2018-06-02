@@ -1,0 +1,49 @@
+<body class="m-0 p-0 bg_img raleway">
+  
+
+
+  <!-- header -->
+  
+  <nav class="navbar navbar-light bg-primarry p-2 text-center">
+    <h1 class="font-weight-bold text-white m-auto .raleway">Login</h1>
+  </nav>
+  
+  
+  <!-- body -->
+  
+  <div class="my-5 container bg-white second_cont" >
+    <div class=" my-auto mx-auto">
+      <div class="container p-5">
+  
+        <form name="loginForm" #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" novalidate>
+  
+  
+          <h3 class="text_prim font-weight-light text-center mb-4">Login</h3>
+          <div class="mx-auto mt-3 img_width">
+            <img src="../../assets/imgs/avatar.png">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">User Name</label>
+            <input type="email" class="form-control rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control rounded-0" id="exampleInputPassword1" placeholder="Password"  required>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input rounded-0" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+          </div>
+          <div class="row mx-0">
+            <button type="submit" class="col-12 btn bg-second rounded-0 text-white" [disabled]="!loginForm.form.valid">LOGIN</button>
+          </div>
+          <div  class="text-center">
+            <small><a href="#" class="text-center">Forget your password</a></small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  
+  </body>
