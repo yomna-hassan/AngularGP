@@ -1,0 +1,69 @@
+.bg-img-onhold{
+    background-image: url("/../assets/imgs/onholdbg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.on-hold-font-color{
+    color: $orangee;
+}
+.bg-size-ticketpg{
+    width:250px;
+    height: 120px ;
+}
+
+.bg-img-open{
+    background-image: url("/../assets/imgs/openedbg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.open-font-color{
+    color: $bg-primarry;
+}
+
+.bg-img-overdue{
+    background-image: url("/../assets/imgs/overduebg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.over-due-font-color{
+    color: $redd;
+}
+.bg-img-done{
+    background-image: url("/../assets/imgs/donebg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.done-font-color{
+    color: $bg-second;
+}
+.bg-bety{
+    background-image: url("/../assets/imgs/bg-bety.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.nav_bar_shadow{
+        box-shadow: 0px 6px 13.92px 2.08px rgba(0, 0, 0, 0.15);
+      
+}
+.profil_pic_dimension{
+    height: 30px;
+    width: 180px;
+}
+.bg_table{
+        background-color: rgb(255, 255, 255);
+        opacity: 0.60;
+}
+.table_border_btom{
+    border-bottom: 2px solid #b3b3b3;
+}
+// .ticket_img{
+//     height: 40px;
+//     width: 44px;
+// }
+.add-btn{
+        border-radius: 2px;
+        background-color: rgb(77, 183, 72);
+        width: 240px;
+        height: 50px;      
+}
