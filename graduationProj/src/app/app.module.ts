@@ -45,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot(appRoutes),
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
+  entryComponents: [AppComponent],
   providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService],
   bootstrap: [AppComponent]
 })

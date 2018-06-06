@@ -4,6 +4,7 @@ import { UserserviceService } from 'src/app/Shared/userservice.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { error } from 'util';
 import { Router } from '@angular/router';
+import { user } from 'src/app/Shared/user';
 
 
 @Component({
@@ -23,13 +24,18 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  OnSubmit(UserName,Password){
-    this.UserService.UserAuthentication(UserName,Password).subscribe(
+  loginUser:user=new user();
+  
+ 
+  OnSubmit(){
+    this.UserService.UserAuthentication(this.loginUser.UserName,this.loginUser.PasswordHash).subscribe(
       (data :any)=>{ 
+        console.log(data)
       localStorage.setItem('userToken',data.access_token);
-      this.router.navigate(['/dashboard'])
+      this.router.navigate(['./dashboard'])
         }, 
-      (err :HttpErrorResponse)=>{
+      err=>{
+        console.log(err)
         this.isLoginError=true;
       } )
     }
