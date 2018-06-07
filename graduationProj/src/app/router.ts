@@ -8,7 +8,7 @@ import { LoginComponent } from "src/app/login/login.component";
 export const appRoutes:Routes=[
    // {path:"",component:LoginComponent},
     {path:"Tickets",component:TicketsComponent},
-    {path:"Dashboard",component:DashboardComponent},
+    {path:"dashboard",component:DashboardComponent},
     {path:"login",component:LoginComponent},
     {path:"",component:LoginComponent},
    // {

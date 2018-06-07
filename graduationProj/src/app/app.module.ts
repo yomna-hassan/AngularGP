@@ -45,6 +45,7 @@ const routers:Routes =[
     RouterModule.forRoot(appRoutes),
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
+  entryComponents: [AppComponent],
   providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService],
   bootstrap: [AppComponent]
 })
