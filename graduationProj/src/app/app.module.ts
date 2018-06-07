@@ -21,13 +21,13 @@ import { NgModel } from '@angular/forms/src/directives/ng_model';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
 
-// const routers:Routes =[
-//   {path:"",component:SidebarComponent},
-//   {path:"Tickets",component:TicketsComponent},
-//   {path:"Dashboard",component:DashboardComponent},
-//   {path:"login",component:LoginComponent},
+const routers:Routes =[
+  {path:"",component:LoginComponent},
+  {path:"Tickets",component:TicketsComponent},
+  {path:"Dashboard",component:DashboardComponent},
+  {path:"navbar",component:NavbarComponent},
 
-// ]
+]
 
 @NgModule({
   declarations: [
