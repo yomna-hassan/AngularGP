@@ -20,14 +20,15 @@ import { UserserviceService } from 'src/app/Shared/userservice.service';
 import { NgModel } from '@angular/forms/src/directives/ng_model';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from 'src/app/auth/auth.guard';
 
-// const routers:Routes =[
+ //const routers:Routes =[
 //   {path:"",component:SidebarComponent},
-//   {path:"Tickets",component:TicketsComponent},
+ // {path:"Tickets",component:TicketsComponent}
 //   {path:"Dashboard",component:DashboardComponent},
 //   {path:"login",component:LoginComponent},
 
-// ]
+ //]
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
   entryComponents: [AppComponent],
-  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService],
+  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
