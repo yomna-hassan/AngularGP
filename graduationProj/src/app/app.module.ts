@@ -22,6 +22,7 @@ import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from 'src/app/auth/auth.guard';
 
+
  //const routers:Routes =[
 //   {path:"",component:SidebarComponent},
  // {path:"Tickets",component:TicketsComponent}
@@ -29,6 +30,14 @@ import { AuthGuard } from 'src/app/auth/auth.guard';
 //   {path:"login",component:LoginComponent},
 
  //]
+const routers:Routes =[
+  {path:"",component:LoginComponent},
+  {path:"Tickets",component:TicketsComponent},
+  {path:"Dashboard",component:DashboardComponent},
+  {path:"navbar",component:NavbarComponent},
+
+]
+
 
 @NgModule({
   declarations: [
