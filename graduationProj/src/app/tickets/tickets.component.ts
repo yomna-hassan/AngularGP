@@ -5,7 +5,7 @@ import { LayerserviceService } from 'src/app/layerservice.service';
 import { Layer } from 'src/app/layer';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { Technician } from 'src/app/technician';
-
+import * as $ from 'jquery' ;
 
 @Component({
   selector: 'app-tickets',
@@ -49,36 +49,36 @@ export class TicketsComponent implements OnInit {
   }
 
   ngOnInit() {
-    // $(document).ready(function(){
-    //   $(".open-border-color").hover(function() {
-    //     console.log ($(this).find('.ticket_img'))
-    //     $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
-    //   }, 
-    //   function() {
-    //     $(".ticket_img").attr("src","/../../assets/imgs/ticketopened2.png");
-    //         });
+    $(document).ready(function(){
+      $(".open-border-color").hover(function() {
+        console.log ($(this).find('.ticket_img'))
+        $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
+      }, 
+      function() {
+        $(".ticket_img").attr("src","/../../assets/imgs/ticketopened2.png");
+            });
 
 
-    // $(".onhold-border-color").hover(function() {
-    //     console.log ($(this).find('.ticket_img'))
-    //     $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
-    //   }, 
-    //   function() {
-    //     $(".ticket_img").attr("src","/../../assets/imgs/ticketopened3.png");
-    //         });
+    $(".onhold-border-color").hover(function() {
+        console.log ($(this).find('.ticket_img'))
+        $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
+      }, 
+      function() {
+        $(".ticket_img").attr("src","/../../assets/imgs/ticketopened3.png");
+            });
 
 
 
-    // $(".onverdue-border-color").hover(function() {
-    //     console.log ($(this).find('.ticket_img'))
-    //     $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
-    //   }, 
-    //   function() {
-    //     $(".ticket_img").attr("src","/../../assets/imgs/ticketopened4.png");
-    //         });
-
+    $(".onverdue-border-color").hover(function() {
+        console.log ($(this).find('.ticket_img'));
+        $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
+      }, 
+      function() {
+        $(".ticket_img").attr("src","/../../assets/imgs/ticketopened4.png");
+            });
 
             
 
-  }
+          }
+        }
 }

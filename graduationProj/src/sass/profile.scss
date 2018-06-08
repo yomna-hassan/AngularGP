@@ -1,3 +1,35 @@
 .jumbotronbg {
     background-color: rgba($color: #fff, $alpha: 0.9)
 }
+// .notification_icon{
+//     width: 23px;
+// }
+
+.overflow_auto {
+    white-space: normal;
+    width: 280px;
+    }
+
+ .a-overflow_auto {
+     white-space: normal;
+      height: 350px;
+      overflow-y: auto;
+ }    
+
+.notify-svg{
+     width:26px;
+    // height:100px;
+      path{
+        fill:$bg-primarry;
+    }
+}
+.my-card-img-top{
+    width: 50px;
+    height: 40px;
+    path{
+        fill:$bg-primarry;
+    }
+}
+.notification-border{
+    border-bottom: 1px solid #cccccc;
+}
