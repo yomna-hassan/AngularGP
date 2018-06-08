@@ -20,12 +20,14 @@ import { UserserviceService } from 'src/app/Shared/userservice.service';
 import { NgModel } from '@angular/forms/src/directives/ng_model';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
 
 const routers:Routes =[
   {path:"",component:LoginComponent},
   {path:"Tickets",component:TicketsComponent},
   {path:"Dashboard",component:DashboardComponent},
-  {path:"navbar",component:NavbarComponent},
+  {path:"profile",component:ProfileComponent},
+
 
 ]
 
@@ -36,7 +38,8 @@ const routers:Routes =[
     SidebarComponent,
     DashboardComponent,
     TicketsComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
