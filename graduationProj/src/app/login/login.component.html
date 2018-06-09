@@ -38,8 +38,11 @@
             <label class="form-check-label" for="exampleCheck1">Remember me</label>
           </div>
           <div class="row mx-0">
-            <button type="submit" class="col-12 btn bg-second rounded-0 text-white" [disabled]="!loginForm.form.valid">LOGIN</button>
-          </div>
+         
+         <a class="row mx-0" routerLink="Dashboard"> 
+             <button type="submit" class="col-12 btn bg-second rounded-0 text-white" [disabled]="!loginForm.form.valid">LOGIN</button>
+          </a>
+            </div>
           <div  class="text-center ">
             <small><a href="#" class="text-center">Forget your password</a></small>
           </div>
