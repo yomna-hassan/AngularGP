@@ -1,0 +1,17 @@
+.dashbord-bg{
+    background-image: url("/../assets/imgs/dashboard-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.dashbord-tec-bg-1{
+    background-color: $dashbord-color;
+    width: 200px;
+    height: 150px;
+    border-radius: 3px;
+}
+.inner-border {
+    border: 5px dashed rgba(0, 0, 0, 0);
+    box-shadow: inset 0px 0px 0px 1px  rgb(224, 224, 224);
+    box-sizing: border-box; /* Include padding and border in element's width and height */
+}
