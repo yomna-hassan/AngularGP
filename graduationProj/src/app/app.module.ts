@@ -22,14 +22,14 @@ import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 
-const routers:Routes =[
-  {path:"",component:LoginComponent},
-  {path:"Tickets",component:TicketsComponent},
-  {path:"Dashboard",component:DashboardComponent},
-  {path:"profile",component:ProfileComponent},
+ //const routers:Routes =[
+  // {path:"",component:LoginComponent},
+  // {path:"Tickets",component:TicketsComponent},
+  // {path:"Dashboard",component:DashboardComponent},
+ // {path:"profile",component:ProfileComponent},
 
 
-]
+ //]
 
 @NgModule({
   declarations: [
