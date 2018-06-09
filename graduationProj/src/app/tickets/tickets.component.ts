@@ -5,6 +5,7 @@ import { LayerserviceService } from 'src/app/layerservice.service';
 import { Layer } from 'src/app/layer';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { Technician } from 'src/app/technician';
+<<<<<<< HEAD
 import { TicketserviceService } from 'src/app/ticketservice.service';
 import { Ticket } from 'src/app/ticket';
 import { EventEmitter } from '@angular/core';
@@ -12,6 +13,9 @@ import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms/src/directives/ng_form';
 
 
+=======
+import * as $ from 'jquery' ;
+>>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77
 
 @Component({
   selector: 'app-tickets',
@@ -96,8 +100,44 @@ export class TicketsComponent implements OnInit {
   
 
   ngOnInit() {
+<<<<<<< HEAD
     
   }
 
 
 }
+=======
+    $(document).ready(function(){
+      $(".open-border-color").hover(function() {
+        console.log ($(this).find('.ticket_img'))
+        $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
+      }, 
+      function() {
+        $(".ticket_img").attr("src","/../../assets/imgs/ticketopened2.png");
+            });
+
+
+    $(".onhold-border-color").hover(function() {
+        console.log ($(this).find('.ticket_img'))
+        $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
+      }, 
+      function() {
+        $(".ticket_img").attr("src","/../../assets/imgs/ticketopened3.png");
+            });
+
+
+
+    $(".onverdue-border-color").hover(function() {
+        console.log ($(this).find('.ticket_img'));
+        $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
+      }, 
+      function() {
+        $(".ticket_img").attr("src","/../../assets/imgs/ticketopened4.png");
+            });
+
+            
+
+          }
+        }
+}
+>>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77

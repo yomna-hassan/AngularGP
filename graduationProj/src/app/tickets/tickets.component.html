@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="row m-0">
     <div class="col-2 sidenave bg-primarry p-0">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -8,86 +9,623 @@
         <a class="nav-link p-3 border_bott_sidenav text-white" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
       </div>
     </div>
+=======
+<body class="fixed-nav sticky-footer pb-5 bg-bety" id="page-top">
+<!-- <div class="bg-bety"> -->
+
+    <app-sidebar></app-sidebar>
+    <app-navbar></app-navbar>
+
+    <div class="col-10 px-0 ml-auto">
+
+          <div class="container">
+           
+            <!-- Icon Cards-->
+            
+            <div class="container d- flex flex-wrap nav py-5 my-4  nav-pills bg-white" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link p-2 active " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                    <div class="">
+                        <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                            <div class="card-body inner-border on-hold-bg-color bg-size-ticketpg  d-flex text-success">
+                               <img src="../../assets/imgs/onhold icon.png">
+                               <div class="ml-auto text-right text-white">On hold</div>
+                            </div>
+                            <div class="card-footer on-hold-font-color ">
+                                <span class="float-left">10</span>
+                                <span class="float-right">Tickets</span>
+                            </div>
+                          </div>
+                      </div>
+                </a>
 
 
 
-    <div class="col-10">
+                <a class="nav-link p-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                    <div class="">
+                        <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                            <div class="card-body inner-border open-bg-color bg-size-ticketpg  d-flex text-success">
+                               <img src="../../assets/imgs/opened icon.png">
+                               <div class="ml-auto text-right text-white">Opened</div>
+                            </div>
+                            <div class="card-footer open-font-color ">
+                                <span class="float-left">10</span>
+                                <span class="float-right">Tickets</span>
+                            </div>
+                          </div>
+                      </div>
+                </a>
+
+
+
+
+                <a class="nav-link p-2" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                    <div class="">
+                        <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                            <div class="card-body inner-border over-due-bg-color bg-size-ticketpg  d-flex text-success">
+                               <img src="../../assets/imgs/overdueicon.png">
+                               <div class="ml-auto text-right text-white">Overdue</div>
+                            </div>
+                            <div class="card-footer over-due-font-color ">
+                                <span class="float-left">10</span>
+                                <span class="float-right">Tickets</span>
+                            </div>
+                          </div>
+                      </div>
+                </a>
+
+
+                <a class="nav-link p-2" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                    <div class="">
+                        <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                            <div class="card-body inner-border done-bg-color bg-size-ticketpg  d-flex text-success">
+                               <img src="../../assets/imgs/done icon.png">
+                               <div class="ml-auto text-right text-white">Done</div>
+                            </div>
+                            <div class="card-footer done-font-color">
+                                <span class="float-left">10</span>
+                                <span class="float-right">Tickets</span>
+                            </div>
+                          </div>
+                      </div>
+                </a>
+
+
+                
+              </div>
+              <div class="tab-content" id="v-pills-tabContent">
+
+
+                <!-- Onhold Ticket -->
+                
+                <div class="tab-pane active  mb-4" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                
+                    <div class="head_line on-hold-font-color mb-3">Onhold Tickets</div>
+                    <table class="table table-scroll" >
+                        
+                        <thead class="thead-light text-uppercase font-weight-bold">
+                            <tr class="d-flex">
+                              
+                              <th class="col-3" scope="col">Assingned to</th>
+                              <th class="col-4" scope="col">date</th>
+                              <th class="col-5" scope="col">sla</th>
+                            </tr>
+                          </thead>
+                        <tbody class="bg_table text-dark">
+
+                            <tr class="table_border_btom d-flex">
+                                <td class="col-3 pl-4">
+                                    <div class=" media py-3 onhold-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened3.png" alt="Generic placeholder image"></div>
+                                        <div class="media-body align-self-center ">
+                                            <span class="align-middle">no1</span>
+                                          </div>
+                                      </div>
+                                  
+                                </td>
+                                <td class="col-4 d-flex flex-column" colspan="2">
+                                    <div><span  class="on-hold-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div >
+                                      <span  class="on-hold-font-color font-weight-bold">Progress :</span>
+                                     
+                                    </div>
+                                </td>
+                                <td class="col-5  pr-5" colspan="2">
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </td>
+                                
+                              </tr>
+
+
+
+
+                              
+                            <tr class="table_border_btom d-flex">
+                                <td class="col-3 pl-4">
+                                    <div class=" media py-3 onhold-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened3.png" alt="Generic placeholder image"></div>
+                                        <div class="media-body align-self-center ">
+                                            <span class="align-middle">no1</span>
+                                          </div>
+                                      </div>
+                                  
+                                </td>
+                                <td class="col-4 d-flex flex-column" colspan="2">
+                                    <div><span  class="on-hold-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                    <div><span  class="on-hold-font-colorfont-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div >
+                                      <span  class="on-hold-font-color font-weight-bold">Progress :</span>
+                                      
+                                    </div>
+                                </td>
+                                <td class="col-5  pr-5" colspan="2">
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </td>
+                                
+                              </tr>
+>>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77
+
+
+
+                              
+                            <tr class="table_border_btom d-flex">
+                                <td class="col-3 pl-4">
+                                    <div class=" media py-3 onhold-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened3.png" alt="Generic placeholder image"></div>
+                                        <div class="media-body align-self-center ">
+                                            <span class="align-middle">no1</span>
+                                          </div>
+                                      </div>
+                                  
+                                </td>
+                                <td class="col-4 d-flex flex-column" colspan="2">
+                                    <div><span  class="on-hold-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div >
+                                      <span  class="on-hold-font-color font-weight-bold">Progress :</span>
+                                     
+                                    </div>
+                                </td>
+                                <td class="col-5 pr-5" colspan="2">
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </td>
+                                
+                              </tr>
+
+
+                              
+                            <tr class="table_border_btom d-flex">
+                                <td class="col-3 pl-4">
+                                    <div class=" media py-3 onhold-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened3.png" alt="Generic placeholder image"></div>
+                                        <div class="media-body align-self-center ">
+                                            <span class="align-middle">no1</span>
+                                          </div>
+                                      </div>
+                                  
+                                </td>
+                                <td class="col-4 d-flex flex-column" colspan="2">
+                                    <div><span  class="on-hold-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div >
+                                      <span  class="on-hold-font-color font-weight-bold">Progress :</span>
+                                     
+                                    </div>
+                                </td>
+                                <td class="col-5  pr-5" colspan="2">
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </td>
+                                
+                              </tr>
+
+
+                          
+                            
+                        </tbody>
+                      </table>
+                      
+                </div>
+
+                <!-- opened ticket -->
+
+                <div class="tab-pane fade mb-4" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                
+                    <div class="head_line open-font-color mb-3">Opened Tickets</div>
+                    <table class="table table-scroll" >
+                        
+                        <thead class="thead-light text-uppercase font-weight-bold">
+                            <tr class="d-flex">
+                              
+                              <th class="col-3" scope="col">Assingned to</th>
+                              <th class="col-4" scope="col">date</th>
+                              <th class="col-5" scope="col">sla</th>
+                            </tr>
+                          </thead>
+                        <tbody class="bg_table text-dark">
+
+                            <tr class="table_border_btom d-flex">
+                                <td class="col-3 pl-4">
+                                    <div class=" media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
+                                        <div class="media-body align-self-center ">
+                                            <span class="align-middle">no1</span>
+                                          </div>
+                                      </div>
+                                  
+                                </td>
+                                <td class="col-4 d-flex flex-column" colspan="2">
+                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div >
+                                      <span  class="open-font-color font-weight-bold">Progress :</span>
+                                      <div class="progress">
+                                        <div class="progress-bar done-bg-color" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                    </div>
+                                </td>
+                                <td class="col-5  pr-5" colspan="2">
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </td>
+                                
+                              </tr>
+
+
+
+
+                              
+                            <tr class="table_border_btom d-flex">
+                                <td class="col-3 pl-4">
+                                    <div class=" media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
+                                        <div class="media-body align-self-center ">
+                                            <span class="align-middle">no1</span>
+                                          </div>
+                                      </div>
+                                  
+                                </td>
+                                <td class="col-4 d-flex flex-column" colspan="2">
+                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div >
+                                      <span  class="open-font-color font-weight-bold">Progress :</span>
+                                      <div class="progress">
+                                        <div class="progress-bar done-bg-color" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                    </div>
+                                </td>
+                                <td class="col-5  pr-5" colspan="2">
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </td>
+                                
+                              </tr>
+
+
+
+                              
+                            <tr class="table_border_btom d-flex">
+                                <td class="col-3 pl-4">
+                                    <div class="media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
+                                        <div class="media-body align-self-center ">
+                                            <span class="align-middle">no1</span>
+                                          </div>
+                                      </div>
+                                  
+                                </td>
+                                <td class="col-4 d-flex flex-column" colspan="2">
+                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div >
+                                      <span  class="open-font-color font-weight-bold">Progress :</span>
+                                      <div class="progress">
+                                        <div class="progress-bar done-bg-color" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                    </div>
+                                </td>
+                                <td class="col-5 pr-5" colspan="2">
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </td>
+                                
+                              </tr>
+
+
+                              
+                            <tr class="table_border_btom d-flex">
+                                <td class="col-3 pl-4">
+                                    <div class="media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
+                                        <div class="media-body align-self-center ">
+                                            <span class="align-middle">no1</span>
+                                          </div>
+                                      </div>
+                                  
+                                </td>
+                                <td class="col-4 d-flex flex-column" colspan="2">
+                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div >
+                                      <span  class="open-font-color font-weight-bold">Progress :</span>
+                                      <div class="progress">
+                                        <div class="progress-bar done-bg-color" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                    </div>
+                                </td>
+                                <td class="col-5  pr-5" colspan="2">
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </td>
+                                
+                              </tr>
+
+
+                          
+                            
+                        </tbody>
+                      </table>
+                      
+                </div>
+
+
+                <!-- overdue Ticket -->
+                <div class="tab-pane fade mb-4" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                  
+                    <div class="head_line over-due-font-color mb-3 font-weight-bold">Overdue Tickets</div>
+                    <table class="table table-scroll" >
+                        
+                        <thead class="thead-light text-uppercase font-weight-bold">
+                            <tr class="d-flex">
+                              
+                              <th class="col-3" scope="col">Assingned to</th>
+                              <th class="col-4" scope="col">date</th>
+                              <th class="col-5" scope="col">sla</th>
+                            </tr>
+                          </thead>
+                        <tbody class="bg_table text-dark">
+
+                            <tr class="table_border_btom d-flex">
+                                <td class="col-3 pl-4">
+                                    <div class=" media py-3 onverdue-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened4.png" alt="Generic placeholder image"></div>
+                                        <div class="media-body align-self-center ">
+                                            <span class="align-middle">no1</span>
+                                          </div>
+                                      </div>
+                                  
+                                </td>
+                                <td class="col-4 d-flex flex-column" colspan="2">
+                                    <div><span  class="over-due-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                    <div><span  class="over-due-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                    <div><span  class="over-due-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div >
+                                      <span  class="over-due-font-color font-weight-bold">Progress :</span>
+                                     
+                                    </div>
+                                </td>
+                                <td class="col-5  pr-5" colspan="2">
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </td>
+                                
+                              </tr>
+
+
+
+
+                              
+                              <tr class="table_border_btom d-flex">
+                                  <td class="col-3 pl-4">
+                                      <div class=" media py-3 onverdue-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                          <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened4.png" alt="Generic placeholder image"></div>
+                                          <div class="media-body align-self-center ">
+                                              <span class="align-middle">no1</span>
+                                            </div>
+                                        </div>
+                                    
+                                  </td>
+                                  <td class="col-4 d-flex flex-column" colspan="2">
+                                      <div><span  class="over-due-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                      <div><span  class="over-due-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                      <div><span  class="over-due-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                      <div >
+                                        <span  class="over-due-font-color font-weight-bold">Progress :</span>
+                                        
+                                      </div>
+                                  </td>
+                                  <td class="col-5  pr-5" colspan="2">
+                                      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                  </td>
+                                  
+                                </tr>
+  
+  
+
+                                <tr class="table_border_btom d-flex">
+                                    <td class="col-3 pl-4">
+                                        <div class=" media py-3 onverdue-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                            <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened4.png" alt="Generic placeholder image"></div>
+                                            <div class="media-body align-self-center ">
+                                                <span class="align-middle">no1</span>
+                                              </div>
+                                          </div>
+                                      
+                                    </td>
+                                    <td class="col-4 d-flex flex-column" colspan="2">
+                                        <div><span  class="over-due-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                        <div><span  class="over-due-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                        <div><span  class="over-due-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                        <div >
+                                          <span  class="over-due-font-color font-weight-bold">Progress :</span>
+                                          
+                                        </div>
+                                    </td>
+                                    <td class="col-5  pr-5" colspan="2">
+                                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    </td>
+                                    
+                                  </tr>
+    
+    
+
+                              
+                                  <tr class="table_border_btom d-flex">
+                                      <td class="col-3 pl-4">
+                                          <div class=" media py-3 onverdue-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                              <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened4.png" alt="Generic placeholder image"></div>
+                                              <div class="media-body align-self-center ">
+                                                  <span class="align-middle">no1</span>
+                                                </div>
+                                            </div>
+                                        
+                                      </td>
+                                      <td class="col-4 d-flex flex-column" colspan="2">
+                                          <div><span  class="over-due-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                                          <div><span  class="over-due-font-color font-weight-bold">Client :</span><span>name_here</span></div>
+                                          <div><span  class="over-due-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                          <div >
+                                            <span  class="over-due-font-color font-weight-bold">Progress :</span>
+                                            
+                                          </div>
+                                      </td>
+                                      <td class="col-5  pr-5" colspan="2">
+                                          when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                      </td>
+                                      
+                                    </tr>
       
-      <nav class="nav_dimention">
-
-      </nav>
-
-
-
-        <table class="table">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-          
-          <table class="table">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
       
+                          
+                            
+                        </tbody>
+                      </table>
+
+                </div>
+
+                <!-- done Ticket -->
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                  
+                    <div class="head_line done-font-color mb-3 font-weight-bold">Done Tickets</div>
+                    <table class="table">
+                        <thead class="thead-light text-uppercase font-weight-bold">
+                          <tr>
+                            <th scope="col-5">Ticket Name</th>
+                            <th scope="col-2">Assingned to</th>
+                            <th scope="col-3">date</th>
+                            <th scope="col-2">sla</th>
+                          </tr>
+                        </thead>
+                        <tbody class="bg_table text-dark">
+                          <tr class="table_border_btom">
+                            <th scope="row">
+                                <div class="media">
+                                    <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
+                                    <div class="media-body align-self-center ">
+                                        <span class="align-middle">ticket name</span>
+                                      </div>
+                                  </div>
+                              
+                            </th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr class="table_border_btom">
+                            <th scope="row">
+                                <div class="media">
+                                    <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
+                                    <div class="media-body align-self-center ">
+                                        <span class="align-middle">ticket name</span>
+                                      </div>
+                                  </div>
+                            </th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr class="table_border_btom">
+                            <th scope="row">
+                                <div class="media">
+                                    <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
+                                    <div class="media-body align-self-center ">
+                                        <span class="align-middle">ticket name</span>
+                                      </div>
+                                  </div>
+                            </th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+            
+                          <tr class="table_border_btom">
+                              <th scope="row">
+                                  <div class="media">
+                                      <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
+                                      <div class="media-body align-self-center ">
+                                          <span class="align-middle">ticket name</span>
+                                        </div>
+                                    </div>
+                              </th>
+                              <td>Larry</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                            </tr>
+            
+                          <tr class="table_border_btom">
+                              <th scope="row">
+                                  <div class="media">
+                                      <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
+                                      <div class="media-body align-self-center ">
+                                          <span class="align-middle">ticket name</span>
+                                        </div>
+                                    </div>
+                              </th>
+                              <td>Larry</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                            </tr>
+            
+                            <tr class="table_border_btom">
+                                <th scope="row">
+                                    <div class="media">
+                                        <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
+                                        <div class="media-body align-self-center ">
+                                            <span class="align-middle">ticket name</span>
+                                          </div>
+                                      </div>
+                                  
+                                </th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                            
+                        </tbody>
+                      </table>
+                      
+
+                </div>
+              </div>
+
+           
+
+
+
+
+    
+         
 
 
           <!-- Button trigger modal -->
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter" (click)="loadSla()">
-          Add New Tickets
-        </button>
-        
+              <button type="button" class="btn add-btn text-center text-white mx-auto d-block mt-4 mb-5" data-toggle="modal" data-target="#exampleModalCenter">
+                Add New Tickets <span class="pl-2"><img src="../../assets/imgs/add tic text.png"></span>
+              </button>
+         
+            
         <!-- Modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
@@ -209,4 +747,21 @@
     </div>
   
 
-  </div>
+  <!-- </div> -->
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>

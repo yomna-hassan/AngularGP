@@ -1,0 +1,141 @@
+.bg-img-onhold{
+    background-image: url("/../assets/imgs/onholdbg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.on-hold-font-color{
+    color: $orangee;
+}
+.on-hold-bg-color{
+    background-color: $orangee;
+}
+.bg-size-ticketpg{
+    width:250px;
+    height: 120px ;
+}
+.onhold-border-color{
+    border:2px solid  $orangee;
+    color:  $orangee;
+}
+.onhold-border-color:hover{
+    background-color:  $orangee;
+    color: white;
+}
+
+
+
+// open
+.bg-img-open{
+    background-image: url("/../assets/imgs/openedbg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.open-bg-color{
+    background-color: $bg-primarry;
+}
+.open-font-color{
+    color: $bg-primarry;
+}
+.open-border-color{
+    border:2px solid $bg-primarry;
+    color: $bg-primarry;
+}
+.open-border-color:hover{
+    background-color: $bg-primarry;
+    color: white;
+}
+// .bg-img{
+//     background-image: url("/../assets/imgs/ticketopened.png");
+//     // width :90%;
+//      height: 100px;
+//     background-color: purple;
+// }
+
+
+
+.bg-img-overdue{
+    background-image: url("/../assets/imgs/overduebg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.over-due-font-color{
+    color: $redd;
+}
+.over-due-bg-color{
+    background-color: $redd;
+}
+.onverdue-border-color{
+    border:2px solid  $redd;
+    color:  $redd;
+}
+.onverdue-border-color:hover{
+    background-color: $redd;
+    color: white;
+}
+
+
+
+.bg-img-done{
+    background-image: url("/../assets/imgs/donebg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.done-font-color{
+    color: $bg-second;
+}
+.done-bg-color{
+    background-color: $bg-second;
+}
+
+
+
+.bg-bety{
+    background-image: url("/../assets/imgs/bg-bety.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.nav_bar_shadow{
+        box-shadow: 0px 6px 13.92px 2.08px rgba(0, 0, 0, 0.15);
+      
+}
+.profil_pic_dimension{
+    height: 30px;
+    width: 180px;
+}
+.bg_table{
+        background-color: rgba(255, 255, 255 , 0.6);
+}
+.table_border_btom{
+    border-bottom: 1px solid #cccccc;
+}
+// .ticket_img{
+//     height: 40px;
+//     width: 44px;
+// }
+.add-btn{
+        border-radius: 2px;
+        background-color: rgb(77, 183, 72);
+        width: 240px;
+        height: 50px;      
+}
+.child {
+    width: 200px;  /* Or whatever */
+    height: 200px; /* Or whatever */
+    margin: auto;  /* Magic! */
+  }
+.dashed {
+    border-style: dashed;
+}
+.inner-border {
+    border: 5px solid rgba(0, 0, 0, 0);
+    box-shadow: inset 0px 0px 0px 1px  rgb(224, 224, 224);
+    box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+.w-90{
+    width: 90%;
+}
+.table-scroll {
+    overflow: auto;
+    height: 530px;
+}

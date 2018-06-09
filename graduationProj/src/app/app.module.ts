@@ -24,13 +24,53 @@ import { TicketserviceService } from 'src/app/ticketservice.service';
 import { Router } from '@angular/router/src/router';
 
 
+<<<<<<< HEAD
+ //const routers:Routes =[
+  // {path:"",component:LoginComponent},
+  // {path:"Tickets",component:TicketsComponent},
+  // {path:"Dashboard",component:DashboardComponent},
+ // {path:"profile",component:ProfileComponent},
+=======
+<<<<<<< HEAD
+import { AuthGuard } from 'src/app/auth/auth.guard';
+import { ProfileComponent } from 'src/app/profile/profile.component';
+=======
 // const routers:Routes =[
+//   {path:"",component:LoginComponent},
+//   {path:"Dashboard/Tickets",component:TicketsComponent},
+//   {path:"Dashboard",component:DashboardComponent},
+//   {path:"Dashboard/profile",component:ProfileComponent},
+>>>>>>> 74012ea1271827118c5bb43cca8e404956dd260a
+>>>>>>> db56d6fd617e2ae019b313872d935f0313b884eb
+
+//import { ProfileComponent } from './profile/profile.component';
+
+<<<<<<< HEAD
+ //]
+=======
+
+
+ //const routers:Routes =[
 //   {path:"",component:SidebarComponent},
-//   {path:"Tickets",component:TicketsComponent},
+ // {path:"Tickets",component:TicketsComponent}
 //   {path:"Dashboard",component:DashboardComponent},
 //   {path:"login",component:LoginComponent},
 
+ //]
+// const routers:Routes =[
+//   {path:"",component:LoginComponent},
+//   {path:"Tickets",component:TicketsComponent},
+//   {path:"Dashboard",component:DashboardComponent},
+//   {path:"profile",component:ProfileComponent},
+
+
 // ]
+
+<<<<<<< HEAD
+=======
+// ]
+>>>>>>> 74012ea1271827118c5bb43cca8e404956dd260a
+>>>>>>> db56d6fd617e2ae019b313872d935f0313b884eb
 
 @NgModule({
   declarations: [
@@ -39,7 +79,8 @@ import { Router } from '@angular/router/src/router';
     SidebarComponent,
     DashboardComponent,
     TicketsComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +89,12 @@ import { Router } from '@angular/router/src/router';
     RouterModule.forRoot(appRoutes),
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
+<<<<<<< HEAD
   providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,TicketserviceService],
+=======
+  entryComponents: [AppComponent],
+  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,AuthGuard],
+>>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77
   bootstrap: [AppComponent]
 })
 export class AppModule { }

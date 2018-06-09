@@ -24,11 +24,17 @@
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
+<<<<<<< HEAD
     "rx-observable-update": "^1.0.0",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.0",
     "vue-resource": "^1.5.1",
     "zone.js": "^0.8.26"
+=======
+    "node-modules": "^1.0.1",
+    "rxjs": "^6.0.0",
+    "zone.js": "^0.6.26"
+>>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.3",
