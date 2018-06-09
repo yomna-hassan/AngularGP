@@ -5,7 +5,13 @@ import { LayerserviceService } from 'src/app/layerservice.service';
 import { Layer } from 'src/app/layer';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { Technician } from 'src/app/technician';
-import * as $ from 'jquery' ;
+//import * as $ from 'jquery' ;
+//signalR
+//import 'Scripts/jquery-1.6.4.in.js';
+//import 'Scripts/jquery.signalR-2.2.2.min.js';
+//import 'signalr/hubs';
+import { Http } from '@angular/http';
+declare var $: any; //jQuery
 
 @Component({
   selector: 'app-tickets',
@@ -14,7 +20,13 @@ import * as $ from 'jquery' ;
 })
 export class TicketsComponent implements OnInit {
 
-  constructor(private slaservice:SlaserviceService,private layerservice:LayerserviceService,private technitianservice:TechnitianserviceService) { }
+  constructor(
+    private slaservice:SlaserviceService,
+    private layerservice:LayerserviceService,
+    private technitianservice:TechnitianserviceService,
+    private http:Http) {
+      this
+     }
 
   slas:Sla[]=[];
   layers:Layer[]=[];
@@ -50,7 +62,8 @@ export class TicketsComponent implements OnInit {
 
   ngOnInit() {
     $(document).ready(function(){
-      $(".open-border-color").hover(function() {
+      $(".open-border-color").hover(
+        function() {
         console.log ($(this).find('.ticket_img'))
         $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
       }, 
@@ -59,7 +72,8 @@ export class TicketsComponent implements OnInit {
             });
 
 
-    $(".onhold-border-color").hover(function() {
+    $(".onhold-border-color").hover(
+      function() {
         console.log ($(this).find('.ticket_img'))
         $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
       }, 
@@ -69,16 +83,14 @@ export class TicketsComponent implements OnInit {
 
 
 
-    $(".onverdue-border-color").hover(function() {
+    $(".onverdue-border-color").hover(
+      function() {
         console.log ($(this).find('.ticket_img'));
         $(this).find('.ticket_img').attr("src","/../../assets/imgs/ticketopened.png");
       }, 
       function() {
         $(".ticket_img").attr("src","/../../assets/imgs/ticketopened4.png");
             });
-
-            
-
-          }
-        }
+      });
+    }
 }

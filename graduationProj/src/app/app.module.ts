@@ -21,16 +21,16 @@ import { NgModel } from '@angular/forms/src/directives/ng_model';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
 
-<<<<<<< HEAD
+
 import { AuthGuard } from 'src/app/auth/auth.guard';
 import { ProfileComponent } from 'src/app/profile/profile.component';
-=======
+
 // const routers:Routes =[
 //   {path:"",component:LoginComponent},
 //   {path:"Dashboard/Tickets",component:TicketsComponent},
 //   {path:"Dashboard",component:DashboardComponent},
 //   {path:"Dashboard/profile",component:ProfileComponent},
->>>>>>> 74012ea1271827118c5bb43cca8e404956dd260a
+
 
 //import { ProfileComponent } from './profile/profile.component';
 
@@ -52,10 +52,6 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
 
 // ]
 
-<<<<<<< HEAD
-=======
-// ]
->>>>>>> 74012ea1271827118c5bb43cca8e404956dd260a
 
 @NgModule({
   declarations: [
