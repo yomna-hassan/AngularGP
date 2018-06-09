@@ -20,11 +20,12 @@ import { UserserviceService } from 'src/app/Shared/userservice.service';
 import { NgModel } from '@angular/forms/src/directives/ng_model';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
+
 import { AuthGuard } from 'src/app/auth/auth.guard';
-=======
-import { ProfileComponent } from './profile/profile.component';
->>>>>>> 4d1be126dd1103055c61d6743bfeb33a505c9fe5
+import { ProfileComponent } from 'src/app/profile/profile.component';
+
+//import { ProfileComponent } from './profile/profile.component';
+
 
 
  //const routers:Routes =[
@@ -34,14 +35,14 @@ import { ProfileComponent } from './profile/profile.component';
 //   {path:"login",component:LoginComponent},
 
  //]
-const routers:Routes =[
-  {path:"",component:LoginComponent},
-  {path:"Tickets",component:TicketsComponent},
-  {path:"Dashboard",component:DashboardComponent},
-  {path:"profile",component:ProfileComponent},
+// const routers:Routes =[
+//   {path:"",component:LoginComponent},
+//   {path:"Tickets",component:TicketsComponent},
+//   {path:"Dashboard",component:DashboardComponent},
+//   {path:"profile",component:ProfileComponent},
 
 
-]
+// ]
 
 
 @NgModule({
