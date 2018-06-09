@@ -20,6 +20,9 @@ import { UserserviceService } from 'src/app/Shared/userservice.service';
 import { NgModel } from '@angular/forms/src/directives/ng_model';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TicketserviceService } from 'src/app/ticketservice.service';
+import { Router } from '@angular/router/src/router';
+
 
 <<<<<<< HEAD
 
@@ -97,8 +100,12 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
     RouterModule.forRoot(appRoutes),
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
+<<<<<<< HEAD
+  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,TicketserviceService],
+=======
   entryComponents: [AppComponent],
   providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,AuthGuard],
+>>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77
   bootstrap: [AppComponent]
 })
 export class AppModule { }

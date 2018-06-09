@@ -10,7 +10,7 @@ export class LayerserviceService {
 
  
 
-  get(slaid){
-    return this.http.get("http://localhost:50941/api/layer/"+slaid);
+  get(SLA_id){
+    return this.http.get("http://localhost:50941/api/layer/"+SLA_id);
   }
 }
