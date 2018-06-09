@@ -20,6 +20,9 @@ import { UserserviceService } from 'src/app/Shared/userservice.service';
 import { NgModel } from '@angular/forms/src/directives/ng_model';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TicketserviceService } from 'src/app/ticketservice.service';
+import { Router } from '@angular/router/src/router';
+
 
 // const routers:Routes =[
 //   {path:"",component:SidebarComponent},
@@ -45,7 +48,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot(appRoutes),
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
-  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService],
+  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,TicketserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
