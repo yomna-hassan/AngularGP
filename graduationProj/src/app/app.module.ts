@@ -68,12 +68,9 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
 
 // ]
 
-<<<<<<< HEAD
-=======
 
 // ]
 
->>>>>>> 4e4548aba5136026c87ab88737339666d25b34b0
 
 @NgModule({
   declarations: [
@@ -92,10 +89,6 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
     RouterModule.forRoot(appRoutes),
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
-<<<<<<< HEAD
-=======
-
->>>>>>> 4e4548aba5136026c87ab88737339666d25b34b0
   providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,TicketserviceService,AuthGuard],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
