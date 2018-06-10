@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
     "@ng-bootstrap/ng-bootstrap": "^2.0.0",
+    "@types/jquery": "^3.3.2",
+    "@types/signalr": "^2.2.35",
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
@@ -30,7 +32,14 @@
     "rxjs-compat": "^6.2.0",
     "vue-resource": "^1.5.1",
     "zone.js": "^0.8.26",
+<<<<<<< HEAD
     "node-modules": "^1.0.1"
+=======
+    "node-modules": "^1.0.1",
+    "signalr": "^2.2.3",
+    "zone.js": "^0.6.26"
+
+>>>>>>> 4e4548aba5136026c87ab88737339666d25b34b0
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.3",

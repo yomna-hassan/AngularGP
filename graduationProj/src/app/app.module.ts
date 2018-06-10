@@ -22,6 +22,10 @@ import { TicketserviceService } from 'src/app/ticketservice.service';
 import { Router } from '@angular/router/src/router';
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4e4548aba5136026c87ab88737339666d25b34b0
  //const routers:Routes =[
   // {path:"",component:LoginComponent},
   // {path:"Tickets",component:TicketsComponent},
@@ -40,6 +44,10 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
 
 //import { ProfileComponent } from './profile/profile.component';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4e4548aba5136026c87ab88737339666d25b34b0
  //]
 
 
@@ -60,6 +68,12 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
 
 // ]
 
+<<<<<<< HEAD
+=======
+
+// ]
+
+>>>>>>> 4e4548aba5136026c87ab88737339666d25b34b0
 
 @NgModule({
   declarations: [
@@ -78,6 +92,10 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
     RouterModule.forRoot(appRoutes),
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4e4548aba5136026c87ab88737339666d25b34b0
   providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,TicketserviceService,AuthGuard],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
