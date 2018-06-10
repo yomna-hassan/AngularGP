@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { RouterModule ,Routes } from '@angular/router';
+
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -23,15 +25,17 @@ import { Router } from '@angular/router/src/router';
 
 
 <<<<<<< HEAD
-=======
 
->>>>>>> 4e4548aba5136026c87ab88737339666d25b34b0
+=======
+<<<<<<< HEAD
  //const routers:Routes =[
   // {path:"",component:LoginComponent},
   // {path:"Tickets",component:TicketsComponent},
   // {path:"Dashboard",component:DashboardComponent},
  // {path:"profile",component:ProfileComponent},
-
+=======
+<<<<<<< HEAD
+>>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77
 import { AuthGuard } from 'src/app/auth/auth.guard';
 import { ProfileComponent } from 'src/app/profile/profile.component';
 
@@ -40,16 +44,18 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
 //   {path:"Dashboard/Tickets",component:TicketsComponent},
 //   {path:"Dashboard",component:DashboardComponent},
 //   {path:"Dashboard/profile",component:ProfileComponent},
+<<<<<<< HEAD
 
+=======
+>>>>>>> 74012ea1271827118c5bb43cca8e404956dd260a
+>>>>>>> db56d6fd617e2ae019b313872d935f0313b884eb
+>>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77
 
 //import { ProfileComponent } from './profile/profile.component';
 
 <<<<<<< HEAD
-=======
-
->>>>>>> 4e4548aba5136026c87ab88737339666d25b34b0
  //]
-
+=======
 
 
  //const routers:Routes =[
@@ -68,9 +74,14 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
 
 // ]
 
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 // ]
-
+>>>>>>> 74012ea1271827118c5bb43cca8e404956dd260a
+>>>>>>> db56d6fd617e2ae019b313872d935f0313b884eb
+>>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77
 
 @NgModule({
   declarations: [
@@ -89,8 +100,12 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
     RouterModule.forRoot(appRoutes),
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
-  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,TicketserviceService,AuthGuard],
+<<<<<<< HEAD
+  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,TicketserviceService],
+=======
   entryComponents: [AppComponent],
+  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,AuthGuard],
+>>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77
   bootstrap: [AppComponent]
 })
 export class AppModule { }
