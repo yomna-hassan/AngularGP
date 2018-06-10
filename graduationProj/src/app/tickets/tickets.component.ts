@@ -5,17 +5,14 @@ import { LayerserviceService } from 'src/app/layerservice.service';
 import { Layer } from 'src/app/layer';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { Technician } from 'src/app/technician';
-<<<<<<< HEAD
 import { TicketserviceService } from 'src/app/ticketservice.service';
 import { Ticket } from 'src/app/ticket';
 import { EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms/src/directives/ng_form';
 
-
-=======
 import * as $ from 'jquery' ;
->>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77
+
 
 @Component({
   selector: 'app-tickets',
@@ -96,17 +93,35 @@ export class TicketsComponent implements OnInit {
     )
   }
 
-
+    //Signal R
+    private sever:any;
+    private client:any;
+    private hub:any;
+    commonTicket:Ticket={Ticket_Id:1,Ticket_Name:"test",Description:"descr",ClientName:"ahmed",SLA_Id:1};
   
+    connectToSignalRHub(){
+      this.hub=$.connection.notificationHub;
+      this.sever=this.hub.server;
+      this.client=this.hub.client;
+      let self=this;
+  
+      this.client.broadcastCommonData=(ticket:Ticket)=>{
+        self.commonTicket=ticket;
+      };
+  
+      //connect to the hub
+      $.connection.hub.start().done((data:any)=>{
+        console.log("hub connection started" + data);
+      }).fail((error:any)=>{
+        console.log("couldn't connect to hub "+error);
+      })
+  
+      }
+
 
   ngOnInit() {
-<<<<<<< HEAD
     
-  }
 
-
-}
-=======
     $(document).ready(function(){
       $(".open-border-color").hover(function() {
         console.log ($(this).find('.ticket_img'))
@@ -137,7 +152,10 @@ export class TicketsComponent implements OnInit {
 
             
 
-          }
-        }
-}
->>>>>>> 11a5767f50746f952e8c8d1bb3fd65d17764bf77
+          }) 
+  }
+
+
+ }
+
+
