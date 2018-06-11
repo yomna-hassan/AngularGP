@@ -20,7 +20,18 @@ import { UserserviceService } from 'src/app/Shared/userservice.service';
 import { NgModel } from '@angular/forms/src/directives/ng_model';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ProfileComponent } from './profile/profile.component';
+import { TicketserviceService } from 'src/app/ticketservice.service';
+import { Router } from '@angular/router/src/router';
+
+
+ //const routers:Routes =[
+  // {path:"",component:LoginComponent},
+  // {path:"Tickets",component:TicketsComponent},
+  // {path:"Dashboard",component:DashboardComponent},
+ // {path:"profile",component:ProfileComponent},
+
+import { AuthGuard } from 'src/app/auth/auth.guard';
+import { ProfileComponent } from 'src/app/profile/profile.component';
 
 // const routers:Routes =[
 //   {path:"",component:LoginComponent},
@@ -29,7 +40,32 @@ import { ProfileComponent } from './profile/profile.component';
 //   {path:"Dashboard/profile",component:ProfileComponent},
 
 
+//import { ProfileComponent } from './profile/profile.component';
+
+
+ //]
+
+
+
+ //const routers:Routes =[
+//   {path:"",component:SidebarComponent},
+ // {path:"Tickets",component:TicketsComponent}
+//   {path:"Dashboard",component:DashboardComponent},
+//   {path:"login",component:LoginComponent},
+
+ //]
+// const routers:Routes =[
+//   {path:"",component:LoginComponent},
+//   {path:"Tickets",component:TicketsComponent},
+//   {path:"Dashboard",component:DashboardComponent},
+//   {path:"profile",component:ProfileComponent},
+
+
 // ]
+
+
+// ]
+
 
 @NgModule({
   declarations: [
@@ -49,7 +85,7 @@ import { ProfileComponent } from './profile/profile.component';
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
   entryComponents: [AppComponent],
-  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService],
+  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

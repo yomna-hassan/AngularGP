@@ -8,7 +8,7 @@ export class TechnitianserviceService {
 
   constructor(private http:Http) { }
 
-  get(layerid){
-    return this.http.get("http://localhost:50941/api/Technician/"+layerid);
+  get(Layer_Id){
+    return this.http.get("http://localhost:50941/api/Technician/"+Layer_Id);
   }
 }
