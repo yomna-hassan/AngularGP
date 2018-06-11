@@ -626,23 +626,68 @@
               <div class="modal-body">
                 
                 
-                  <form>
+                  <form method="post" #ticketForm="ngForm" (ngSubmit)="create(ticketForm)">
                       <div class="container">
-                          <div class="pb-3">
-                            <input type="text" class="form-control" placeholder="Name">
+                           <div class="pb-3">
+                              <input type="number" class="form-control" name="Ticket_Id" #Ticket_Id="ngModel" [ngModel]="ticketservice.selectedTicket.Ticket_Id" placeholder="Id">
+                            </div>
+                          <div class="pb-3"> 
+                            <input type="text" class="form-control" name="Ticket_Name" #Ticket_Name="ngModel" [ngModel]="ticketservice.selectedTicket.Ticket_Name" placeholder="Name">
                           </div>
                        
                          
                           <div class="pb-3">
-                            <input type="text" class="form-control" placeholder="Description">
+                            <input type="text" class="form-control" name="Description" #Description="ngModel" [ngModel]="ticketservice.selectedTicket.Description" placeholder="Description">
                           </div>
 
                           <div class="pb-3">
-                            <input type="text" class="form-control" placeholder="Client">
+                            <input type="text" class="form-control" name="ClientName" #ClientName="ngModel" [ngModel]="ticketservice.selectedTicket.ClientName" placeholder="Client">
                           </div>
-                        
+
+                          <div class="form-group col-md-10">
+                            <label for="inputState">SLA</label>
+                            <select id="sla" class="form-control" [ngModel]="selectedValue" name="SLA_id" (ngModelChange)="slaChanged($event)">
+                              <option *ngFor="let item of slas " [ngValue]="item.SLA_id">{{item.SLA_name}}</option>
+                            </select>
+                        </div> 
+
+                          <!-- <div class="pb-3">
+                            <input type="number" class="form-control" name="SLA_id" #SLA_id="ngModel" [ngModel]="ticketservice.selectedTicket.SLA_id" placeholder="SLA_id">
+                          </div>  -->
+
+
+                          
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Create</button>
+                            </div>
+
+                            
+                      </div>
+                  </form>   
+                  <div class="pb-3">
+                    <input type="text" class="form-control" name="UserId" #Id="ngModel" [ngModel]="UserId" placeholder="technician">
+                  </div> 
+                   
+
+                  <div class="form-group col-md-10">
+                      <label for="inputState">Layer</label>
+                      <select id="layer" class="form-control" ngModel="selectedValue" name="Layer_Id" (ngModelChange)="layerChanged($event)">
+                        <option *ngFor="let item of layers " [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
+                      
+                      </select>
+                  </div>
+
+                  <div class="form-group col-md-10">
+                    <label for="inputState">Technician</label>
+                    <select id="technician" class="form-control" ngModel="selectedValue" name="Id" (ngModelChange)="technicianChanged($event)">
+                      <option *ngFor="let item of technicians " [ngValue]="item.Id">{{item.UserName}}</option>
+                    </select>
+                  </div>
+                  
+                 
                      
-                     
+               <!-- 
                           <div class="form-group col-md-10">
                               <label for="inputState">SLA</label>
                               <select id="sla" class="form-control" ngModel="selectedValue" name="selectSla" (ngModelChange)="slaChanged($event)">
@@ -660,7 +705,7 @@
                           
                               <div class="form-group col-md-10">
                                   <label for="inputState">Technician</label>
-                                  <select id="technician" class="form-control" ngModel="selectedValue" name="selectTech">
+                                  <select id="technician" class="form-control" ngModel="selectedValue" name="selectTech" (ngModelChange)="technicianChanged($event)">
                                     <option *ngFor="let item of technicians " [ngValue]="item.Id">{{item.UserName}}</option>
                                   </select>
                               </div>
@@ -669,11 +714,11 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Create</button>
+                            <button type="submit" class="btn btn-primary">Create</button>
                           </div>
 
                         </div>
-                    </form>
+                    </form> -->
 
 
               </div>

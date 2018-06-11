@@ -20,15 +20,24 @@ import { UserserviceService } from 'src/app/Shared/userservice.service';
 import { NgModel } from '@angular/forms/src/directives/ng_model';
 import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TicketserviceService } from 'src/app/ticketservice.service';
+import { Router } from '@angular/router/src/router';
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> c776d8c7c0c6d278d61a9e82ce0eabcaa56807ca
  //const routers:Routes =[
   // {path:"",component:LoginComponent},
   // {path:"Tickets",component:TicketsComponent},
   // {path:"Dashboard",component:DashboardComponent},
  // {path:"profile",component:ProfileComponent},
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c776d8c7c0c6d278d61a9e82ce0eabcaa56807ca
 import { AuthGuard } from 'src/app/auth/auth.guard';
 import { ProfileComponent } from 'src/app/profile/profile.component';
 
@@ -37,7 +46,17 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
 //   {path:"Dashboard/Tickets",component:TicketsComponent},
 //   {path:"Dashboard",component:DashboardComponent},
 //   {path:"Dashboard/profile",component:ProfileComponent},
+<<<<<<< HEAD
 //]
+=======
+
+
+//import { ProfileComponent } from './profile/profile.component';
+
+
+ //]
+
+>>>>>>> c776d8c7c0c6d278d61a9e82ce0eabcaa56807ca
 
 
  //const routers:Routes =[
@@ -56,7 +75,13 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
 
 // ]
 
+<<<<<<< HEAD
 // ]
+=======
+
+// ]
+
+>>>>>>> c776d8c7c0c6d278d61a9e82ce0eabcaa56807ca
 
 @NgModule({
   declarations: [

@@ -6,3 +6,49 @@ body{
 .head_line{
     font-size: 27px;
 }
+
+
+
+
+//fonts
+
+.font_size_3{
+    font-size: 14px;
+}
+.font_size_5{
+    font-size: 12px;
+}
+
+
+
+
+
+//color
+
+.on-hold-font-color{
+    color: $orangee;
+}
+.on-hold-bg-color{
+    background-color: $orangee;
+}
+
+.open-bg-color{
+    background-color: $bg-primarry;
+}
+.open-font-color{
+    color: $bg-primarry;
+}
+
+.over-due-font-color{
+    color: $redd;
+}
+.over-due-bg-color{
+    background-color: $redd;
+}
+
+.done-font-color{
+    color: $bg-second;
+}
+.done-bg-color{
+    background-color: $bg-second;
+}
