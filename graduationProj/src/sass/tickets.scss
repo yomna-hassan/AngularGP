@@ -3,12 +3,6 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-.on-hold-font-color{
-    color: $orangee;
-}
-.on-hold-bg-color{
-    background-color: $orangee;
-}
 .bg-size-ticketpg{
     width:250px;
     height: 120px ;
@@ -29,12 +23,6 @@
     background-image: url("/../assets/imgs/openedbg.png");
     background-repeat: no-repeat;
     background-size: contain;
-}
-.open-bg-color{
-    background-color: $bg-primarry;
-}
-.open-font-color{
-    color: $bg-primarry;
 }
 .open-border-color{
     border:2px solid $bg-primarry;
@@ -58,12 +46,6 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-.over-due-font-color{
-    color: $redd;
-}
-.over-due-bg-color{
-    background-color: $redd;
-}
 .onverdue-border-color{
     border:2px solid  $redd;
     color:  $redd;
@@ -79,12 +61,6 @@
     background-image: url("/../assets/imgs/donebg.png");
     background-repeat: no-repeat;
     background-size: contain;
-}
-.done-font-color{
-    color: $bg-second;
-}
-.done-bg-color{
-    background-color: $bg-second;
 }
 
 

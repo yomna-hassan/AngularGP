@@ -15,3 +15,125 @@
     box-shadow: inset 0px 0px 0px 1px  rgb(224, 224, 224);
     box-sizing: border-box; /* Include padding and border in element's width and height */
 }
+.technicain-bg{
+    width: 130px;
+    height: 173px;
+    background-color: #fff;
+}
+.postion-tech{
+    top: 50%;
+    left: 16%;
+}
+.bg-gradient-gr{
+    background-image: url("/../assets/imgs/gredient green.png");
+    background-size: cover;
+    height: 46px;
+}
+.bg_img_tech{
+    background-image: url("/../assets/imgs/Layer 4.png");
+    background-size: cover;
+    height: 59px;
+    width: 59px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12%;
+    right: 27%;
+    border: 4px solid $redd;
+}
+.border-tech{
+    border:1px dashed $bg-primarry;
+    width: 114px;
+    height: 112px;
+    // position: absolute;
+    // bottom: 10%;
+    // right: 10%;
+}
+
+//section 2
+.dashbord-tec-bg-2{
+    background-color: $dashbord-color;
+    // width: 377px;
+    height: 150px;
+    border-radius: 3px;
+}
+.dashbord-tec-bg-dist{
+    margin-top: 9rem;
+}
+.dashbord-tec-bg-dist-1{
+    margin-top: 6rem;
+}
+.postion-tech-2{
+    top: 50%;
+    left: 9%;
+}
+.postion-tech-2-2{
+    top: 50%;
+    right: 9%;
+}
+.bg-gradient-gr-2{
+    background-image: url("/../assets/imgs/orange-gr-layer.png");
+    background-size: cover;
+    height: 46px;
+}
+
+
+//3rd section
+.dashbord-tec-bg-3{
+    background-color: $dashbord-color;
+    // width: 840px;
+    height: 150px;
+    border-radius: 3px;
+}
+.postion-tech-3{
+    top: 50%;
+    left: 4%;
+}
+.postion-tech-3-2{
+    top: 50%;
+    left: 25%;
+}
+.postion-tech-3-3{
+    top: 50%;
+    right: 25%;
+}
+.postion-tech-3-4{
+    top: 50%;
+    right: 4%;
+}
+
+.bg-gradient-gr-3{
+    background-image: url("/../assets/imgs/blue-gr.png");
+    background-size: cover;
+    height: 46px;
+}
+
+
+
+
+// 3rd level of support
+.img_third{
+    background-size: cover;
+    width: 220px;
+    height: 103px;
+}
+.img_third_1{
+     background-image: url("/../assets/imgs/third line of support.png");
+}
+.img_third_2{
+    background-image: url("/../assets/imgs/second line of support.png");
+}
+.img_third_3{
+    background-image: url("/../assets/imgs/first line of suppot.png");
+}
+
+.dashed-bg{
+    background-color: $dashbord-color;
+}
+// .font_family_level-support{
+
+// }
+.img_details{
+    padding: 20px;
+    position: relative;
+    top: 18px;
+}
