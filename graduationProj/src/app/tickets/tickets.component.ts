@@ -36,6 +36,7 @@ export class TicketsComponent implements OnInit {
     this.slaservice.get().subscribe(
       d=>{
         this.slas=d.json();
+        
    }
     );
 }
