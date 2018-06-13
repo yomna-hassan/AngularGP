@@ -7,7 +7,6 @@ import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { Technician } from 'src/app/technician';
 
 import { Http } from '@angular/http';
-declare var $: any; //jQuery
 
 import * as $ from 'jquery' ;
 import { TicketserviceService } from 'src/app/ticketservice.service';
