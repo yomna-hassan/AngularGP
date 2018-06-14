@@ -4,7 +4,7 @@ import { SidebarComponent } from "src/app/sidebar/sidebar.component";
 import { TicketsComponent } from "src/app/tickets/tickets.component";
 import { DashboardComponent } from "src/app/dashboard/dashboard.component";
 import { LoginComponent } from "src/app/login/login.component";
-
+import { RegisterComponent } from './register/register.component';
 import { SlaComponent } from './sla/sla.component';
 
 import { ProfileComponent } from "src/app/profile/profile.component";
@@ -19,7 +19,8 @@ export const appRoutes:Routes=[
      {path:"login",component:LoginComponent},
      {path:"",component:LoginComponent},
      {path:"profile",component:ProfileComponent},
-     {path:"sla",component:SlaComponent}
+     {path:"sla",component:SlaComponent},
+     {path:"register",component:RegisterComponent}
 ];
     
      //   path:'', redirectTo:'/login',pathMatch:'full'
