@@ -34,6 +34,7 @@ import { AuthGuard } from 'src/app/auth/auth.guard';
 import { ProfileComponent } from 'src/app/profile/profile.component';
 import { SlaComponent } from './sla/sla.component';
 import { RegisterComponent } from './register/register.component';
+import { Register2Component } from './register2/register2.component';
 
 // const routers:Routes =[
 //   {path:"",component:LoginComponent},
@@ -79,7 +80,8 @@ import { RegisterComponent } from './register/register.component';
     NavbarComponent,
     ProfileComponent,
     SlaComponent,
-    RegisterComponent
+    RegisterComponent,
+    Register2Component
   ],
   imports: [
     BrowserModule,

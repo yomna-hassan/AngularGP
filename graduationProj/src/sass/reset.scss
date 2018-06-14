@@ -99,3 +99,12 @@ body{
     border-color:$bg-primarry;
 }
 
+
+//bgss
+
+.dashbord-bg-register{
+    background-image: url("/../assets/imgs/dashboard-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
