@@ -8,7 +8,7 @@ import { Technician } from 'src/app/technician';
 
 import { Http } from '@angular/http';
 
-import * as $ from 'jquery' ;
+//import * as $ from 'jquery' ;
 import { TicketserviceService } from 'src/app/ticketservice.service';
 import { Router } from '@angular/router';
 import { Ticket } from '../ticket';
@@ -36,6 +36,7 @@ export class TicketsComponent implements OnInit {
     this.slaservice.get().subscribe(
       d=>{
         this.slas=d.json();
+        
    }
     );
 }
