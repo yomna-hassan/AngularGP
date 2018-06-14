@@ -13,6 +13,7 @@ import { TicketserviceService } from 'src/app/ticketservice.service';
 import { Router } from '@angular/router';
 import { Ticket } from '../ticket';
 import { NgForm } from '@angular/forms';
+import { TicketTechnician } from 'src/app/ticket-technician';
 
 @Component({
   selector: 'app-tickets',
@@ -32,6 +33,43 @@ export class TicketsComponent implements OnInit {
   layers:Layer[]=[];
   technicians:Technician[]=[];
   tickets:Ticket[]=[];
+  ticketTechniciansOnhold:TicketTechnician[]=[];
+  ticketTechniciansOpened:TicketTechnician[]=[];
+  ticketTechniciansOverdue:TicketTechnician[]=[];
+  ticketTechniciansDone:TicketTechnician[]=[];
+
+
+
+  //Display tickets
+  loadOnHold(){
+    this.ticketservice.getOnHold().subscribe(d=>{
+      this.ticketTechniciansOnhold=d.json();
+    })
+  }
+
+  loadOpened(){
+    this.ticketservice.getOpened().subscribe(d=>{
+      this.ticketTechniciansOpened=d.json();
+    })
+  }
+
+  loadOverdue(){
+    this.ticketservice.getOvedue().subscribe(
+      d=>{
+        this.ticketTechniciansOverdue=d.json();
+      }
+    )
+  }
+
+  loadDone(){
+    this.ticketservice.getDone().subscribe(
+      d=>{
+        this.ticketTechniciansDone=d.json();
+      }
+    )
+  }
+
+
   loadSla(){
     this.slaservice.get().subscribe(
       d=>{
@@ -77,7 +115,7 @@ export class TicketsComponent implements OnInit {
       d=>{
         alert(JSON.stringify(d));
         console.log(d); 
-        this.tickets.push(d.json());
+        //this.tickets.push(d.JSON());
         this.router.navigate(['./Tickets']);
 
       }
@@ -98,6 +136,10 @@ export class TicketsComponent implements OnInit {
   
 
   ngOnInit() {
+    this.loadOnHold();
+    this.loadOpened();
+    this.loadOverdue();
+    this.loadDone();
 
   //   $(document).ready(function(){
   //     $(".open-border-color").hover(function() {

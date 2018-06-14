@@ -19,7 +19,7 @@
                                <div class="ml-auto text-right text-white">On hold</div>
                             </div>
                             <div class="card-footer on-hold-font-color ">
-                                <span class="float-left">10</span>
+                                <span class="float-left">{{ticketTechniciansOnhold.length}}</span>
                                 <span class="float-right">Tickets</span>
                             </div>
                           </div>
@@ -36,7 +36,7 @@
                                <div class="ml-auto text-right text-white">Opened</div>
                             </div>
                             <div class="card-footer open-font-color ">
-                                <span class="float-left">10</span>
+                                <span class="float-left">{{ticketTechniciansOpened.length}}</span>
                                 <span class="float-right">Tickets</span>
                             </div>
                           </div>
@@ -54,7 +54,7 @@
                                <div class="ml-auto text-right text-white">Overdue</div>
                             </div>
                             <div class="card-footer over-due-font-color ">
-                                <span class="float-left">10</span>
+                                <span class="float-left">{{ticketTechniciansOverdue.length}}</span>
                                 <span class="float-right">Tickets</span>
                             </div>
                           </div>
@@ -70,7 +70,7 @@
                                <div class="ml-auto text-right text-white">Done</div>
                             </div>
                             <div class="card-footer done-font-color">
-                                <span class="float-left">10</span>
+                                <span class="float-left">{{ticketTechniciansDone.length}}</span>
                                 <span class="float-right">Tickets</span>
                             </div>
                           </div>
@@ -100,7 +100,7 @@
                           </thead>
                         <tbody class="bg_table text-dark">
 
-                            <tr class="table_border_btom d-flex">
+                            <tr class="table_border_btom d-flex" *ngFor="let item of ticketTechniciansOnhold">
                                 <td class="col-3 pl-4">
                                     <div class=" media py-3 onhold-border-color w-50 mr-auto d-flex flex-column justify-content-center">
                                         <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened3.png" alt="Generic placeholder image"></div>
@@ -111,9 +111,10 @@
                                   
                                 </td>
                                 <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="on-hold-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="on-hold-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="on-hold-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Name :</span><span>{{item.Ticket_Name}}</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Client :</span><span>{{item.ClientName}}</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Date :</span><span>{{item.Ticket_date}}</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Technician :</span><span>{{item.UserName}}</span></div>
                                     <div >
                                       <span  class="on-hold-font-color font-weight-bold">Progress :</span>
                                      
@@ -124,94 +125,6 @@
                                 </td>
                                 
                               </tr>
-
-
-
-
-                              
-                            <tr class="table_border_btom d-flex">
-                                <td class="col-3 pl-4">
-                                    <div class=" media py-3 onhold-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened3.png" alt="Generic placeholder image"></div>
-                                        <div class="media-body align-self-center ">
-                                            <span class="align-middle">no1</span>
-                                          </div>
-                                      </div>
-                                  
-                                </td>
-                                <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="on-hold-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="on-hold-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="on-hold-font-colorfont-weight-bold">Date :</span><span>date_here</span></div>
-                                    <div >
-                                      <span  class="on-hold-font-color font-weight-bold">Progress :</span>
-                                      
-                                    </div>
-                                </td>
-                                <td class="col-5  pr-5" colspan="2">
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                </td>
-                                
-                              </tr>
-
-
-
-                              
-                            <tr class="table_border_btom d-flex">
-                                <td class="col-3 pl-4">
-                                    <div class=" media py-3 onhold-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened3.png" alt="Generic placeholder image"></div>
-                                        <div class="media-body align-self-center ">
-                                            <span class="align-middle">no1</span>
-                                          </div>
-                                      </div>
-                                  
-                                </td>
-                                <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="on-hold-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="on-hold-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="on-hold-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                    <div >
-                                      <span  class="on-hold-font-color font-weight-bold">Progress :</span>
-                                     
-                                    </div>
-                                </td>
-                                <td class="col-5 pr-5" colspan="2">
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                </td>
-                                
-                              </tr>
-
-
-                              
-                            <tr class="table_border_btom d-flex">
-                                <td class="col-3 pl-4">
-                                    <div class=" media py-3 onhold-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened3.png" alt="Generic placeholder image"></div>
-                                        <div class="media-body align-self-center ">
-                                            <span class="align-middle">no1</span>
-                                          </div>
-                                      </div>
-                                  
-                                </td>
-                                <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="on-hold-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="on-hold-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="on-hold-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                    <div >
-                                      <span  class="on-hold-font-color font-weight-bold">Progress :</span>
-                                     
-                                    </div>
-                                </td>
-                                <td class="col-5  pr-5" colspan="2">
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                </td>
-                                
-                              </tr>
-
-
-                          
-                            
                         </tbody>
                       </table>
                       
@@ -234,7 +147,7 @@
                           </thead>
                         <tbody class="bg_table text-dark">
 
-                            <tr class="table_border_btom d-flex">
+                            <tr class="table_border_btom d-flex" *ngFor="let item of ticketTechniciansOpened">
                                 <td class="col-3 pl-4">
                                     <div class=" media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
                                         <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
@@ -245,9 +158,10 @@
                                   
                                 </td>
                                 <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Name :</span><span>{{item.Ticket_Name}}</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Client :</span><span>{{item.ClientName}}</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Date :</span><span>{{item.Ticket_date}}</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Technician :</span><span>{{item.UserName}}</span></div>
                                     <div >
                                       <span  class="open-font-color font-weight-bold">Progress :</span>
                                       <div class="progress">
@@ -259,101 +173,7 @@
                                     when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                                 </td>
                                 
-                              </tr>
-
-
-
-
-                              
-                            <tr class="table_border_btom d-flex">
-                                <td class="col-3 pl-4">
-                                    <div class=" media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
-                                        <div class="media-body align-self-center ">
-                                            <span class="align-middle">no1</span>
-                                          </div>
-                                      </div>
-                                  
-                                </td>
-                                <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                    <div >
-                                      <span  class="open-font-color font-weight-bold">Progress :</span>
-                                      <div class="progress">
-                                        <div class="progress-bar done-bg-color" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                      </div>
-                                    </div>
-                                </td>
-                                <td class="col-5  pr-5" colspan="2">
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                </td>
-                                
-                              </tr>
-
-
-
-                              
-                            <tr class="table_border_btom d-flex">
-                                <td class="col-3 pl-4">
-                                    <div class="media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
-                                        <div class="media-body align-self-center ">
-                                            <span class="align-middle">no1</span>
-                                          </div>
-                                      </div>
-                                  
-                                </td>
-                                <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                    <div >
-                                      <span  class="open-font-color font-weight-bold">Progress :</span>
-                                      <div class="progress">
-                                        <div class="progress-bar done-bg-color" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                      </div>
-                                    </div>
-                                </td>
-                                <td class="col-5 pr-5" colspan="2">
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                </td>
-                                
-                              </tr>
-
-
-                              
-                            <tr class="table_border_btom d-flex">
-                                <td class="col-3 pl-4">
-                                    <div class="media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
-                                        <div class="media-body align-self-center ">
-                                            <span class="align-middle">no1</span>
-                                          </div>
-                                      </div>
-                                  
-                                </td>
-                                <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                    <div >
-                                      <span  class="open-font-color font-weight-bold">Progress :</span>
-                                      <div class="progress">
-                                        <div class="progress-bar done-bg-color" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                      </div>
-                                    </div>
-                                </td>
-                                <td class="col-5  pr-5" colspan="2">
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                </td>
-                                
-                              </tr>
-
-
-                          
-                            
+                              </tr>                   
                         </tbody>
                       </table>
                       
@@ -376,7 +196,7 @@
                           </thead>
                         <tbody class="bg_table text-dark">
 
-                            <tr class="table_border_btom d-flex">
+                            <tr class="table_border_btom d-flex" *ngFor="let item of ticketTechniciansOverdue">
                                 <td class="col-3 pl-4">
                                     <div class=" media py-3 onverdue-border-color w-50 mr-auto d-flex flex-column justify-content-center">
                                         <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened4.png" alt="Generic placeholder image"></div>
@@ -387,9 +207,10 @@
                                   
                                 </td>
                                 <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="over-due-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="over-due-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="over-due-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Name :</span><span>{{item.Ticket_Name}}</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Client :</span><span>{{item.ClientName}}</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Date :</span><span>{{item.Ticket_date}}</span></div>
+                                    <div><span  class="on-hold-font-color font-weight-bold">Technician :</span><span>{{item.UserName}}</span></div>
                                     <div >
                                       <span  class="over-due-font-color font-weight-bold">Progress :</span>
                                      
@@ -400,94 +221,6 @@
                                 </td>
                                 
                               </tr>
-
-
-
-
-                              
-                              <tr class="table_border_btom d-flex">
-                                  <td class="col-3 pl-4">
-                                      <div class=" media py-3 onverdue-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                          <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened4.png" alt="Generic placeholder image"></div>
-                                          <div class="media-body align-self-center ">
-                                              <span class="align-middle">no1</span>
-                                            </div>
-                                        </div>
-                                    
-                                  </td>
-                                  <td class="col-4 d-flex flex-column" colspan="2">
-                                      <div><span  class="over-due-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                      <div><span  class="over-due-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                      <div><span  class="over-due-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                      <div >
-                                        <span  class="over-due-font-color font-weight-bold">Progress :</span>
-                                        
-                                      </div>
-                                  </td>
-                                  <td class="col-5  pr-5" colspan="2">
-                                      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                  </td>
-                                  
-                                </tr>
-  
-  
-
-                                <tr class="table_border_btom d-flex">
-                                    <td class="col-3 pl-4">
-                                        <div class=" media py-3 onverdue-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                            <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened4.png" alt="Generic placeholder image"></div>
-                                            <div class="media-body align-self-center ">
-                                                <span class="align-middle">no1</span>
-                                              </div>
-                                          </div>
-                                      
-                                    </td>
-                                    <td class="col-4 d-flex flex-column" colspan="2">
-                                        <div><span  class="over-due-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                        <div><span  class="over-due-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                        <div><span  class="over-due-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                        <div >
-                                          <span  class="over-due-font-color font-weight-bold">Progress :</span>
-                                          
-                                        </div>
-                                    </td>
-                                    <td class="col-5  pr-5" colspan="2">
-                                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                    </td>
-                                    
-                                  </tr>
-    
-    
-
-                              
-                                  <tr class="table_border_btom d-flex">
-                                      <td class="col-3 pl-4">
-                                          <div class=" media py-3 onverdue-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                              <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened4.png" alt="Generic placeholder image"></div>
-                                              <div class="media-body align-self-center ">
-                                                  <span class="align-middle">no1</span>
-                                                </div>
-                                            </div>
-                                        
-                                      </td>
-                                      <td class="col-4 d-flex flex-column" colspan="2">
-                                          <div><span  class="over-due-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                          <div><span  class="over-due-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                          <div><span  class="over-due-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                          <div >
-                                            <span  class="over-due-font-color font-weight-bold">Progress :</span>
-                                            
-                                          </div>
-                                      </td>
-                                      <td class="col-5  pr-5" colspan="2">
-                                          when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                      </td>
-                                      
-                                    </tr>
-      
-      
-                          
-                            
                         </tbody>
                       </table>
 
@@ -507,90 +240,20 @@
                           </tr>
                         </thead>
                         <tbody class="bg_table text-dark">
-                          <tr class="table_border_btom">
+                          <tr class="table_border_btom" *ngFor="let item of ticketTechniciansDone">
                             <th scope="row">
                                 <div class="media">
                                     <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
                                     <div class="media-body align-self-center ">
-                                        <span class="align-middle">ticket name</span>
+                                        <span class="align-middle">{{item.Ticket_Name}}</span>
                                       </div>
                                   </div>
                               
                             </th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td>{{item.UserName}}</td>
+                            <td>{{item.Ticket_date}}</td>
+                            <td>{{item.SLA_name}}</td>
                           </tr>
-                          <tr class="table_border_btom">
-                            <th scope="row">
-                                <div class="media">
-                                    <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
-                                    <div class="media-body align-self-center ">
-                                        <span class="align-middle">ticket name</span>
-                                      </div>
-                                  </div>
-                            </th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr class="table_border_btom">
-                            <th scope="row">
-                                <div class="media">
-                                    <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
-                                    <div class="media-body align-self-center ">
-                                        <span class="align-middle">ticket name</span>
-                                      </div>
-                                  </div>
-                            </th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-            
-                          <tr class="table_border_btom">
-                              <th scope="row">
-                                  <div class="media">
-                                      <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
-                                      <div class="media-body align-self-center ">
-                                          <span class="align-middle">ticket name</span>
-                                        </div>
-                                    </div>
-                              </th>
-                              <td>Larry</td>
-                              <td>the Bird</td>
-                              <td>@twitter</td>
-                            </tr>
-            
-                          <tr class="table_border_btom">
-                              <th scope="row">
-                                  <div class="media">
-                                      <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
-                                      <div class="media-body align-self-center ">
-                                          <span class="align-middle">ticket name</span>
-                                        </div>
-                                    </div>
-                              </th>
-                              <td>Larry</td>
-                              <td>the Bird</td>
-                              <td>@twitter</td>
-                            </tr>
-            
-                            <tr class="table_border_btom">
-                                <th scope="row">
-                                    <div class="media">
-                                        <img class="mr-3"src="../../assets/imgs/ticket.png" alt="Generic placeholder image">
-                                        <div class="media-body align-self-center ">
-                                            <span class="align-middle">ticket name</span>
-                                          </div>
-                                      </div>
-                                  
-                                </th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                              </tr>
-                            
                         </tbody>
                       </table>
                       
@@ -598,17 +261,9 @@
                 </div>
               </div>
 
-           
-
-
-
-
-    
-         
-
 
           <!-- Button trigger modal -->
-              <button type="button" class="btn add-btn text-center text-white mx-auto d-block mt-4 mb-5" data-toggle="modal" data-target="#exampleModalCenter">
+              <button type="button" class="btn add-btn text-center text-white mx-auto d-block mt-4 mb-5" data-toggle="modal" data-target="#exampleModalCenter" (click)="loadSla()">
                 Add New Tickets <span class="pl-2"><img src="../../assets/imgs/add tic text.png"></span>
               </button>
          
@@ -659,6 +314,10 @@
                           
                             
                       </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn open-bg-color text-white">Create</button>
+                    </div>
                   </form>   
                   <div class="pb-3">
                     <input type="text" class="form-control" name="UserId" #Id="ngModel" [ngModel]="UserId" placeholder="technician">
@@ -668,7 +327,7 @@
                   <div class="form-group col-md-10">
                       <label for="inputState">Layer</label>
                       <select id="layer" class="form-control" ngModel="selectedValue" name="Layer_Id" (ngModelChange)="layerChanged($event)">
-                        <option *ngFor="let item of layers " [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
+                        <option *ngFor="let item of layers" [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
                       
                       </select>
                   </div>
@@ -681,10 +340,7 @@
                   </div>
                   
                  
-                  <div class="modal-footer">
-                        <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn open-bg-color text-white">Create</button>
-                    </div>
+                  
 
                      
                <!-- 
