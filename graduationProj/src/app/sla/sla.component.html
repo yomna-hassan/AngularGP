@@ -4,7 +4,7 @@
       <app-sidebar></app-sidebar>
 
   
-      <div class="col-10 px-0 ml-auto">
+      <div class="col-10 px-0 ml-auto" >
 
 
       <nav class="navbar navbar-light bg-light justify-content-between nav_bar_shadow mb-5 container-fluid py-3 px-0" id="mainNav">
@@ -25,7 +25,7 @@
              </div>
          </nav>
   
-            <div class="container">
+            <div class="container" ng-f>
            
               
               <table class="table mt-4 pt-4">
@@ -40,12 +40,12 @@
 
                   </tr>
                 </thead>
-                <tbody class="bg_table">
-                  <tr class="table_border_btom">
-                    <th scope="row">dummy Name </th>
-                    <td class="py-3">02:00</td>
-                    <td class="py-3">02:00</td>
-                    <td class="py-3">02:00</td>
+                <tbody class="bg_table"  >
+                  <tr class="table_border_btom" *ngFor="let item of slas">
+                    <th scope="row">{{item.SLA_name}} </th>
+                    <td class="py-3">{{item.L1_Time}}</td>
+                    <td class="py-3">{{item.L2_Time}}</td>
+                    <td class="py-3">{{item.L3_Time}}</td>
                     <td>
                       <button type="button" class="btn btn-success text-center text-white mx-auto d-block my-2 ">Update</button>
                     </td>
@@ -53,55 +53,7 @@
                       <button type="button" class="btn over-due-bg-color text-center text-white mx-auto d-block my-2 ">Delete</button>
                     </td>
                   </tr>
-                  <tr class="table_border_btom">
-                      <th scope="row">dummy Name </th>
-                      <td class="py-3">02:00</td>
-                      <td class="py-3">02:00</td>
-                      <td class="py-3">02:00</td>
-                      <td>
-                        <button type="button" class="btn btn-success text-center text-white mx-auto d-block my-2 ">Update</button>
-                      </td>
-                      <td>
-                        <button type="button" class="btn over-due-bg-color text-center text-white mx-auto d-block my-2 ">Delete</button>
-                      </td>
-                    </tr>
-                    <tr class="table_border_btom">
-                        <th scope="row">dummy Name </th>
-                        <td class="py-3">02:00</td>
-                        <td class="py-3">02:00</td>
-                        <td class="py-3">02:00</td>
-                        <td>
-                          <button type="button" class="btn btn-success text-center text-white mx-auto d-block my-2 ">Update</button>
-                        </td>
-                        <td>
-                          <button type="button" class="btn over-due-bg-color text-center text-white mx-auto d-block my-2 ">Delete</button>
-                        </td>
-                      </tr>
-                      <tr class="table_border_btom">
-                          <th scope="row">dummy Name </th>
-                          <td class="py-3">02:00</td>
-                          <td class="py-3">02:00</td>
-                          <td class="py-3">02:00</td>
-                          <td>
-                            <button type="button" class="btn btn-success text-center text-white mx-auto d-block my-2 ">Update</button>
-                          </td>
-                          <td>
-                            <button type="button" class="btn over-due-bg-color text-center text-white mx-auto d-block my-2 ">Delete</button>
-                          </td>
-                        </tr>
-                        <tr class="table_border_btom">
-                            <th scope="row">dummy Name </th>
-                            <td class="py-3">02:00</td>
-                            <td class="py-3">02:00</td>
-                            <td class="py-3">02:00</td>
-                            <td>
-                              
-                              <button type="button" class="btn btn-success text-center text-white mx-auto d-block my-2 ">Update</button>
-                            </td>
-                            <td>
-                              <button type="button" class="btn over-due-bg-color text-center text-white mx-auto d-block my-2 ">Delete</button>
-                            </td>
-                          </tr>
+                 
                 </tbody>
               </table>
 
@@ -125,7 +77,7 @@
 
                 
           <!-- Button trigger modal -->
-              <button type="button" class="btn add-btn text-center text-white mx-auto d-block mt-4 mb-4 open-font-color" data-toggle="modal" data-target="#exampleModalCenter">
+              <button type="button" class="btn add-btn text-center text-white mx-auto d-block mt-4 mb-4 open-font-color" data-toggle="modal" data-target="#exampleModalCenter" (click)="getlayer()">
                   Create New SLA <span class="pl-2"><img src="../../assets/imgs/add tic text.png"></span>
                 </button>
            
@@ -141,47 +93,53 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form class="container">
+                    <form class="container" method="post" #slaForm="ngForm"  (ngSubmit)="create(slaForm)">
                       <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Name :</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                        <input type="text" class="form-control" id="recipient-name" name="slaname" #slaname="ngModel" [ngModel]="slaService.selectedSla.slaname" placeholder="Name" >
                       </div>
-                      <div class="form-check form-check-inline pr-4 pb-4">
-                          <input type="checkbox" aria-label="Checkbox for following text input">
-                        <label for="message-text" class="mr-2 col-form-label">Layer1</label>
+                      <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Name :</label>
+                        <input type="number" class="form-control" name="Layer_id" #Layer_id="ngModel" [ngModel]="slaService.selectedSla.Layer_id" placeholder="Layer_id" >
                       </div>
-                      <div class="form-check form-check-inline pr-4 pb-4">
+                    
+                      <!-- <div class="form-check form-check-inline pr-4 pb-4" *ngFor="let item of layers;let i=index">
+                          <input type="checkbox" aria-label="Checkbox for following text input" [id]="'layer-'+i" value="{{item.Layer_id}} " [checked]="item.Layer_id"  [(ngModel)]="check"  (change)="isAnswerProvided($event, check)" >
+                        <label for="message-text" class="mr-2 col-form-label" [for]="'layers-'+i">{{item.Layer_name}}</label>
+                      </div> -->
+                      <!-- <div class="form-check form-check-inline pr-4 pb-4">
                           <input type="checkbox" aria-label="Checkbox for following text input">
                         <label for="message-text" class="mr-2 col-form-label">Layer2</label>
                       </div>
                       <div class="form-check form-check-inline pr-4 pb-4">
                           <input type="checkbox" aria-label="Checkbox for following text input">
                         <label for="message-text" class="mr-2 col-form-label">Layer3</label>
-                      </div>
+                      </div> -->
                       <div class="form-group row">
                           <label for="inputEmail1" class="col-sm-3 col-form-label">Time 1</label>
                           <div class="col-sm-9">
-                            <input  class="form-control" id="inputEmail1" placeholder="Enter a time">
+                            <input  class="form-control" id="inputEmail1" placeholder="Enter a time" name="l1time" #l1time="ngModel" [ngModel]="slaService.selectedSla.l1time">
                           </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail2" class="col-sm-3 col-form-label">Time 2</label>
                             <div class="col-sm-9">
-                              <input  class="form-control" id="inputEmail2" placeholder="Enter a time">
+                              <input  class="form-control" id="inputEmail2" placeholder="Enter a time" name="l2time" #l2time="ngModel" [ngModel]="slaService.selectedSla.l2time">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">Time 3</label>
                             <div class="col-sm-9">
-                              <input  class="form-control" id="inputEmail3" placeholder="Enter a time">
+                              <input  class="form-control" id="inputEmail3" placeholder="Enter a time" name="l3time" #l3time="ngModel" [ngModel]="slaService.selectedSla.l3time">
                             </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn open-bg-color text-white">Create</button>
                         </div>
                     </form>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn open-bg-color text-white">Create</button>
-                  </div>
+
                 </div>
               </div>
             </div>
