@@ -52,6 +52,10 @@ body{
 .done-bg-color{
     background-color: $bg-second;
 }
+.dashd-bg-color{
+    background-color: $dashbord-color;
+}
+
 
 
 
@@ -93,4 +97,14 @@ body{
 .page-item.active .page-link{
     background-color: $bg-primarry;
     border-color:$bg-primarry;
+}
+
+
+//bgss
+
+.dashbord-bg-register{
+    background-image: url("/../assets/imgs/dashboard-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }

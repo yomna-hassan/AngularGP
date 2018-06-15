@@ -26,8 +26,24 @@ export class TicketserviceService {
 
   constructor(private http:Http) { }
 
+  getOnHold(){
+    return this.http.get("http://localhost:50941/api/Tick/OnHold")
+  }
+
+  getOpened(){
+    return this.http.get("http://localhost:50941/api/Tick/Opened")
+  }
+
+  getOvedue(){
+    return this.http.get("http://localhost:50941/api/Tick/Overdue")
+  }
+  getDone(){
+    return this.http.get("http://localhost:50941/api/Tick/Done")
+
+  }
+
   get(){
-    return this.http.get("http://localhost:50941/api/Ticket");
+    return this.http.get("http://localhost:50941/api/Tick");
   }
 
   

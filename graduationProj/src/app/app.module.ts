@@ -33,6 +33,8 @@ import { Router } from '@angular/router/src/router';
 import { AuthGuard } from 'src/app/auth/auth.guard';
 import { ProfileComponent } from 'src/app/profile/profile.component';
 import { SlaComponent } from './sla/sla.component';
+import { RegisterComponent } from './register/register.component';
+import { Register2Component } from './register2/register2.component';
 
 // const routers:Routes =[
 //   {path:"",component:LoginComponent},
@@ -77,7 +79,9 @@ import { SlaComponent } from './sla/sla.component';
     TicketsComponent,
     NavbarComponent,
     ProfileComponent,
-    SlaComponent
+    SlaComponent,
+    RegisterComponent,
+    Register2Component
   ],
   imports: [
     BrowserModule,
