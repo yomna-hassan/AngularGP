@@ -281,63 +281,88 @@
               <div class="modal-body">
                 
                 
-                  <form method="post" #ticketForm="ngForm" (ngSubmit)="create(ticketForm)">
+                  <form method="post" name="ticketForm" #ticketForm="ngForm" (ngSubmit)="create(ticketForm)">
                       <div class="container">
-                           <div class="pb-3">
-                              <input type="number" class="form-control" name="Ticket_Id" #Ticket_Id="ngModel" [ngModel]="ticketservice.selectedTicket.Ticket_Id" placeholder="Id">
-                            </div>
+                           <!-- <div class="pb-3">
+                              <input type="number" class="form-control" name="Ticket_Id" #TicketId="ngModel" [ngModel]="ticketservice.selectedTicket.Ticket_Id" placeholder="Id" required>
+                              <span class="" *ngIf="!TicketId.valid && TicketId.touched">Ticket id required</span>
+                            </div> -->
                           <div class="pb-3"> 
-                            <input type="text" class="form-control" name="Ticket_Name" #Ticket_Name="ngModel" [ngModel]="ticketservice.selectedTicket.Ticket_Name" placeholder="Name">
+                            <input type="text" class="form-control" name="Ticket_Name" #TicketName="ngModel" [ngModel]="ticketservice.selectedTicket.Ticket_Name" placeholder="Name" required>
+                            <span class="text-danger" *ngIf="!TicketName.valid && TicketName.touched">Ticket name required</span>
                           </div>
                        
                          
                           <div class="pb-3">
-                            <input type="text" class="form-control" name="Description" #Description="ngModel" [ngModel]="ticketservice.selectedTicket.Description" placeholder="Description">
+                            <input type="text" class="form-control" name="Description" #Description="ngModel" [ngModel]="ticketservice.selectedTicket.Description" placeholder="Description" required>
+                            <span class="text-danger" *ngIf="!Description.valid && Description.touched">Description required</span>
                           </div>
 
                           <div class="pb-3">
-                            <input type="text" class="form-control" name="ClientName" #ClientName="ngModel" [ngModel]="ticketservice.selectedTicket.ClientName" placeholder="Client">
+                            <input type="text" class="form-control" name="ClientName" #ClientName="ngModel" [ngModel]="ticketservice.selectedTicket.ClientName" placeholder="Client" required>
+                            <span class="text-danger" *ngIf="!ClientName.valid && ClientName.touched">Client name required</span>
                           </div>
 
-                          <div class="form-group col-md-10">
+                          <div class="form-group col-md-10" >
                             <label for="inputState">SLA</label>
-                            <select id="sla" class="form-control" [ngModel]="selectedValue" name="SLA_id" (ngModelChange)="slaChanged($event)">
+                            <select id="sla" class="form-control" ngModel="selectedValue" name="SLA_id" #SLAid="ngModel" (ngModelChange)="slaChanged($event)" required>
                               <option *ngFor="let item of slas " [ngValue]="item.SLA_id">{{item.SLA_name}}</option>
                             </select>
+                            <span class="text-danger" *ngIf="SLAid.valid && SLAid.touched">SLA Id required</span>
                         </div> 
 
-                          <!-- <div class="pb-3">
-                            <input type="number" class="form-control" name="SLA_id" #SLA_id="ngModel" [ngModel]="ticketservice.selectedTicket.SLA_id" placeholder="SLA_id">
-                          </div>  -->
+                         
+                      
 
+          
+                            <div class="form-group col-md-10">
+                                <label for="inputState">Layer</label>
+                                <select id="layer" class="form-control" ngModel="selectedValue" name="Layer_Id" #LayerId="ngModel" (ngModelChange)="layerChanged($event)" required>
+                                  <option *ngFor="let item of layers" [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
+                                
+                                </select>
+                                <span class="text-danger" *ngIf="LayerId.valid && LayerId.touched">Layer Id required</span>
+                            </div>
+          
+                            <div class="form-group col-md-10">
+                              <label for="inputState">Technician</label>
+                              <select id="technician" class="form-control" ngModel="selectedValue" name="Id" #TechId="ngModel"(ngModelChange)="technicianChanged($event)" required>
+                                <option *ngFor="let item of technicians " [ngValue]="item.Id">{{item.UserName}}</option>
+                              </select>
+                              <span class="text-danger" *ngIf="TechId.valid && TechId.touched">Layer Id required</span>
+                            </div>
 
                           
                             
                       </div>
+                          
+                      <!-- <div class="pb-3">
+                          <input type="text" class="form-control" name="UserId" #Id="ngModel" [ngModel]="UserId" placeholder="technician">
+                          <span class="text-danger" *ngIf="TechId.valid && TechId.touched">Layer Id required</span>
+                        </div> 
+                        
+      
+                        <div class="form-group col-md-10">
+                            <label for="inputState">Layer</label>
+                            <select id="layer" class="form-control" ngModel="selectedValue" name="Layer_Id" (ngModelChange)="layerChanged($event)">
+                              <option *ngFor="let item of layers" [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
+                            
+                            </select>
+                        </div>
+      
+                        <div class="form-group col-md-10">
+                          <label for="inputState">Technician</label>
+                          <select id="technician" class="form-control" ngModel="selectedValue" name="Id" (ngModelChange)="technicianChanged($event)">
+                            <option *ngFor="let item of technicians " [ngValue]="item.Id">{{item.UserName}}</option>
+                          </select>
+                        </div> -->
+
                       <div class="modal-footer">
                         <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn open-bg-color text-white">Create</button>
+                        <button type="submit" class="btn open-bg-color text-white" data-dismiss="modal"  [disabled]="!ticketForm.valid">Create</button>
                     </div>
                   </form>   
-                  <div class="pb-3">
-                    <input type="text" class="form-control" name="UserId" #Id="ngModel" [ngModel]="UserId" placeholder="technician">
-                  </div> 
-                   
-
-                  <div class="form-group col-md-10">
-                      <label for="inputState">Layer</label>
-                      <select id="layer" class="form-control" ngModel="selectedValue" name="Layer_Id" (ngModelChange)="layerChanged($event)">
-                        <option *ngFor="let item of layers" [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
-                      
-                      </select>
-                  </div>
-
-                  <div class="form-group col-md-10">
-                    <label for="inputState">Technician</label>
-                    <select id="technician" class="form-control" ngModel="selectedValue" name="Id" (ngModelChange)="technicianChanged($event)">
-                      <option *ngFor="let item of technicians " [ngValue]="item.Id">{{item.UserName}}</option>
-                    </select>
-                  </div>
+                 
                   
                  
                   

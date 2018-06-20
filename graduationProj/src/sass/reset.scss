@@ -68,7 +68,18 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    height: 100vh;
 }
+
+
+.bg-login{
+    background-image: url("/../assets/imgs/login-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
 
 
 .bg_table{

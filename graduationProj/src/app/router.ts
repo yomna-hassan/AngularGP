@@ -9,6 +9,8 @@ import { SlaComponent } from './sla/sla.component';
 import { Register2Component } from './register2/register2.component';
 import { ProfileComponent } from "src/app/profile/profile.component";
 import { AuthGuard } from "src/app/auth/auth.guard";
+import { ProfilDataComponent } from './profil-data/profil-data.component';
+
 
 export const appRoutes:Routes=[
     {path:"",component:LoginComponent},
@@ -21,7 +23,8 @@ export const appRoutes:Routes=[
      {path:"profile",component:ProfileComponent},
      {path:"sla",component:SlaComponent},
      {path:"register",component:RegisterComponent},
-     {path:"register2",component:Register2Component}
+     {path:"register2",component:Register2Component},
+     {path:"profiledata",component:ProfilDataComponent}
 ];
     
      //   path:'', redirectTo:'/login',pathMatch:'full'

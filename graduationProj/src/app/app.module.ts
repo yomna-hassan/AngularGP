@@ -35,6 +35,8 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
 import { SlaComponent } from './sla/sla.component';
 import { RegisterComponent } from './register/register.component';
 import { Register2Component } from './register2/register2.component';
+import { ProfilDataComponent } from './profil-data/profil-data.component';
+import { SidebarDisbatureComponent } from './sidebar-disbature/sidebar-disbature.component';
 
 // const routers:Routes =[
 //   {path:"",component:LoginComponent},
@@ -81,7 +83,9 @@ import { Register2Component } from './register2/register2.component';
     ProfileComponent,
     SlaComponent,
     RegisterComponent,
-    Register2Component
+    Register2Component,
+    ProfilDataComponent,
+    SidebarDisbatureComponent
   ],
   imports: [
     BrowserModule,
