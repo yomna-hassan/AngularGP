@@ -1,0 +1,120 @@
+<body class="fixed-nav sticky-footer pb-5 dashbord-bg-register" id="page-top">
+    <!-- <div class="bg-bety"> -->
+    
+   <app-sidebar></app-sidebar>
+  
+    
+    <div class="col-10 px-0 ml-auto ">
+  
+  
+      <nav class="navbar navbar-light bg-light justify-content-between nav_bar_shadow mb-5 container-fluid py-3 px-0" id="mainNav">
+         <div class="container">
+            <div class="nav-item">
+    
+              <div class="media">
+                  <img class="align-self-end  mr-3" src="../../assets/imgs/Layer 4.png" alt="Generic placeholder image">
+                  <div class="media-body align-self-center">
+                    <h6 class="my-auto ">Loged in as SuperAdmin</h6>
+                   </div>
+              </div>
+             </div>
+              <div class="text-right">
+                  <a class="nav-link open-font-color " data-toggle="modal" data-target="#exampleModal" href="#">
+                                Logout <img src="../../assets/imgs/logout.png"></a>
+             </div>
+         </div>
+      </nav>
+    
+      <div class="container  col-7">
+
+          <div class="modal-header open-bg-color text-white">
+              <h4 class="modal-title m-auto" id="RegisterModelLabel">Add New Technicain</h4>
+              
+            </div>
+        
+          <form class="container" #registerForm="ngForm" (ngSubmit)="Create(registerForm)" enctype="multipart/form-data">
+              <div class="form-group row mt-4">
+                <label for="recipient-name" class="col-sm-3 col-form-label font-weight-bold">Name :</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="recipient-name" placeholder="Name" name="Name" #Name="ngModel" [(ngModel)]="userservice.user.Name">
+                </div>
+              </div>
+
+              <div class="form-group row mt-4">
+                <label for="recipient-name" class="col-sm-3 col-form-label font-weight-bold">User Name :</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="recipient-username" placeholder="UserName" name="UserName" #Name="ngModel" [(ngModel)]="userservice.user.UserName">
+                </div>
+              </div>
+
+              <div class="form-group row mt-4">
+                    <label for="recipient-name" class="col-sm-3 col-form-label font-weight-bold">Email :</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="recipient-email" placeholder="Email" name="Email" #Email="ngModel" [(ngModel)]="userservice.user.Email">
+                    </div>
+                </div>
+              <div class="form-group row">
+                  <label for="inputPassword" class="col-sm-3 col-form-label font-weight-bold" >Password</label>
+                  <div class="col-sm-9">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="Password" #Password="ngModel" [(ngModel)]="userservice.user.Password">
+                  </div>
+               </div>
+               <div class="form-group row">
+                  <label for="inputPassword2" class="col-sm-3 col-form-label font-weight-bold">Confirm Password</label>
+                  <div class="col-sm-9">
+                    <input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password"  name="ConfirmPassword" #ConfirmPassword="ngModel" [(ngModel)]="userservice.user.ConfirmPassword">
+                  </div>
+               </div>
+              
+               <div for="defaultCheck" class="col-form-label  font-weight-bold form-check-inline col-3" *ngIf="roles">Role</div>
+               <div class="form-check form-check-inline mr-4" *ngFor="let item of roles;let i=index">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"[id]="'roles-'+i" value="item.Id" [checked]="item.selected" (change)="updateSelectedRoles(i)">
+                  <label class="form-check-label" for="defaultCheck1" [for]="'roles'+i">
+                    {{item.Name}}
+                  </label>
+                 </div>
+                <!-- <div class="form-check form-check-inline  mx-4">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                  <label class="form-check-label" for="defaultCheck2">
+                      Dispature
+                  </label> 
+                 </div> -->
+                <!-- <div class="form-check form-check-inline mx-4">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    <label class="form-check-label" for="defaultCheck3">
+                        Technicain
+                    </label>
+                  </div>  -->
+
+                <div class="form-group row mt-4">
+                    <label for="inputSLayer" class="font-weight-bold col-sm-3">Layer</label>
+                    <div class="col-sm-9">
+                        <select id="inputSLayer" class="form-control" [(ngModel)]="Layer_Id" name="Layer_Id" (ngModelChange)="layerChanged($event)">
+                            <option *ngFor="let item of layers" [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
+                         
+                          </select>
+                    </div>
+                  </div>
+
+                  <!-- <div class="form-group row">
+                      <label for="exampleFormControlFile1" class="font-weight-bold col-sm-3">Add Picture</label>
+                      <div class="col-sm-9">
+                          <input type="file" class="form-control-file text-dark bg-light" id="exampleFormControlFile1" >
+                      </div>
+                    </div> -->
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn open-bg-color text-white">Done</button>
+                    </div>
+
+            </form>
+
+           
+
+      </div>
+
+
+
+    </div>
+</body>

@@ -28,11 +28,13 @@ export class LoginComponent implements OnInit {
   
  
   OnSubmit(){
-    this.UserService.UserAuthentication(this.loginUser.UserName,this.loginUser.PasswordHash).subscribe(
+    this.UserService.UserAuthentication(this.loginUser.UserName,this.loginUser.Password).subscribe(
       (data :any)=>{ 
         console.log(data)
       localStorage.setItem('userToken',data.access_token);
-      this.router.navigate(['./dashboard'])
+      localStorage.setItem('userRoles',data.role);
+      alert("ok");
+      this.router.navigate(['dashboard'])
         }, 
       err=>{
         console.log(err)

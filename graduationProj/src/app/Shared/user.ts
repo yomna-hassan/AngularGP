@@ -1,10 +1,13 @@
 
 
 export class user{
-  public  Name:string;
-   public UserName:string;
-   public PasswordHash:string;
-    public layer_id:number;
-    public image:string;
+  public Id:String;
+  public Name:string;
+  public UserName:string;
+  public Email:string;
+  public Password:string;
+  public ConfirmPassword:string;
+  public Layer_Id:number;
+
 
 }

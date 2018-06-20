@@ -94,7 +94,7 @@ export class TicketsComponent implements OnInit {
  
   slaChanged(value){
     this.slaid=value;
-    this.layerservice.get(value).subscribe(
+    this.layerservice.getbysla(value).subscribe(
       d=>{
         this.layers=d.json();
       }
