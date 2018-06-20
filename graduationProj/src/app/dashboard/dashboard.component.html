@@ -146,20 +146,27 @@
 
               <div class="row dashbord-tec-bg-dist" >
                   <div class="col-12">
+                    
+                      
                     <div class=" m-auto inner-border dashbord-tec-bg-3 position-relative" >
                         <button type="button" class="btn open-bg-color text-center text-white mx-auto d-block my-3 ">Network</button>
-                        <div class="technicain-bg postion-tech-3 position-absolute" *ngFor="let item of Layer1Tec">
-                        <div class="position-relative">
-                          <div class="bg-gradient-gr-3">
-                            <div class="bg_img_tech"></div>
-                          </div>
-                          <div class="border-tech mx-auto my-2 font_size_5 text-center">
-                            <p class="font-weight-bold  font_size_3 mb-1 mt-4">{{item.UserName}}</p>
-                            <p class="mb-1">First Layer of support</p>
-                            <p class="font-weight-bold open-font-color mb-1">Network</p>
-                          </div>
-                        </div>
-                      </div>
+                        <div class="row">
+                          <div class="col-3 " *ngFor="let item of Layer1Tec">
+                            <div class="technicain-bg ml-5 position-absolute">
+                            <div class="position-relative">
+                              <div class="bg-gradient-gr-3">
+                                <div class="bg_img_tech"></div>
+                              </div>
+                              <div class="border-tech mx-auto my-2 font_size_5 text-center">
+                                <p class="font-weight-bold  font_size_3 mb-1 mt-4">{{item.UserName}}</p>
+                                <p class="mb-1">First Layer of support</p>
+                                <p class="font-weight-bold open-font-color mb-1">Network</p>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+                         
+                    
 
                       <!-- <div class="technicain-bg postion-tech-3-2 position-absolute">
                           <div class="position-relative">
@@ -200,7 +207,9 @@
                                   </div>
                                 </div>
                               </div> -->
+                            
                             </div>
+                          </div>
                           </div>
           
                     
