@@ -18,13 +18,27 @@ export class SlaserviceService {
     return this.http.get("http://localhost:50941/api/sla");
   }
 
-  selectedSla:LayerSla=new LayerSla(null,null,null,null,null,null);
+  selectedSla:LayerSla=new LayerSla(null,null,null,null);
 
   postsla(selectedSla:LayerSla){
     var body=JSON.stringify(selectedSla);
     var headerOptions = new Headers({'Content-Type':'application/json'});
     var requestOptions = new RequestOptions({method : RequestMethod.Post,headers : headerOptions});
     return this.http.post('http://localhost:50941/api/sla',body,requestOptions).pipe(map(x=>x.json()));
+
+  }
+
+  delete(Id:number){
+    var headerOptions = new Headers({'Content-Type':'application/json'});
+    var requestOptions = new RequestOptions({method : RequestMethod.Post,headers : headerOptions});
+   return this.http.post("http://localhost:50941/api/slaa?Id="+Id,requestOptions);
+  }
+
+  oldSla:LayerSla=new LayerSla(null,null,null,null);
+  update(id:number,oldSla:LayerSla){
+    var headerOptions = new Headers({'Content-Type':'application/json'});
+    var requestOptions = new RequestOptions({method : RequestMethod.Post,headers : headerOptions});
+    return this.http.post("http://localhost:50941/api/sla/"+id,oldSla,requestOptions);
 
   }
 

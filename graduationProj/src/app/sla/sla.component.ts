@@ -15,10 +15,12 @@ import { LayerSla } from 'src/app/layer-sla';
 export class SlaComponent implements OnInit {
 
  
-  constructor(private slaService:SlaserviceService,private layerservice:LayerserviceService,private router:Router) { }
+  constructor(private slaservice:SlaserviceService,private layerservice:LayerserviceService,private router:Router) { }
   slas:Sla[]=[];
+  deleteId:number;
+  updateId:number;
   getSla(){
-    this.slaService.get().subscribe(
+    this.slaservice.get().subscribe(
       d=>{
         this.slas=d.json();
         console.log(JSON.stringify(this.slas))
@@ -43,18 +45,60 @@ export class SlaComponent implements OnInit {
  }
 
  create(form:NgForm){
-  this.slaService.postsla(form.value).subscribe(
+  this.slaservice.postsla(form.value).subscribe(
     d=>{
       alert(JSON.stringify(d));
       console.log(d); 
       //this.layersla.push(d.json());
+      this.getSla();
       this.router.navigate(['./sla']);
 
+    })}
+
+    del(value:number){
+      this.deleteId=value;
+     // alert(this.deleteId);
     }
-  )
+
+    deleteSla(){
+      this.slaservice.delete(this.deleteId).subscribe(
+        d=>{
+          alert(JSON.stringify(d));
+          this.getSla();
+        }) }
+
+
+        layerChanged(value){
+          this.slaservice.selectedSla.Layer_id=value;
+        }
+
+
+
+update(value:number){
+  this.updateId=value;
+  alert(this.updateId);
+
+
 }
+        
+
+  updateSla(form:NgForm){
+    this.slaservice.update(this.updateId,form.value).subscribe(
+      d=>{
+        alert(JSON.stringify(d));
+      console.log(d); 
+      this.layersla.push(d.json());
+      this.getSla();
+      this.router.navigate(['./sla']);
+      })}
 
 
+      Logout(){
+        localStorage.removeItem('userToken');
+        this.router.navigate(['/login']);
+      }
+
+     
   // d=>{
 
   //   alert(JSON.stringify(d));
@@ -86,6 +130,7 @@ export class SlaComponent implements OnInit {
 
   ngOnInit() {
         this.getSla();
+        this.getlayer();
         
   }
 

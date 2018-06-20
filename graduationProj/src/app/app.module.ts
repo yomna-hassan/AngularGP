@@ -30,7 +30,7 @@ import { Router } from '@angular/router/src/router';
   // {path:"Dashboard",component:DashboardComponent},
  // {path:"profile",component:ProfileComponent},
 
-import { AuthGuard } from 'src/app/auth/auth.guard';
+
 import { ProfileComponent } from 'src/app/profile/profile.component';
 import { SlaComponent } from './sla/sla.component';
 import { RegisterComponent } from './register/register.component';
@@ -91,7 +91,7 @@ import { Register2Component } from './register2/register2.component';
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
   entryComponents: [AppComponent],
-  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,AuthGuard],
+  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

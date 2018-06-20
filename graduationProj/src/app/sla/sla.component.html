@@ -19,7 +19,7 @@
                    </div>
            </div>
                <div class="text-right">
-                      <a class="nav-link open-font-color " data-toggle="modal" data-target="#exampleModal" href="#">
+                      <a class="nav-link open-font-color " data-toggle="modal" data-target="#exampleModal" href="#" (click)="Logout()">
                               Logout <img src="../../assets/imgs/logout.png"></a>
                </div>
              </div>
@@ -47,16 +47,14 @@
                     <td class="py-3">{{item.L2_Time}}</td>
                     <td class="py-3">{{item.L3_Time}}</td>
                     <td>
-                      <button type="button" class="btn btn-success text-center text-white mx-auto d-block my-2" data-toggle="modal" data-target="#UpdateModel">Update</button>
+                      <button type="button" class="btn btn-success text-center text-white mx-auto d-block my-2" data-toggle="modal" data-target="#UpdateModel" (click)="update(item.SLA_id)">Update</button>
                     </td>
                     <td>
-                      <button type="button" class="btn over-due-bg-color text-center text-white mx-auto d-block my-2" data-toggle="modal" data-target="#DeleteModel">Delete</button>
+                      <button type="button" class="btn over-due-bg-color text-center text-white mx-auto d-block my-2" data-toggle="modal" data-target="#DeleteModel" (click)="del(item.SLA_id)">Delete</button>
                     </td>
                   </tr>
-<<<<<<< HEAD
-                 
-=======
-                  <tr class="table_border_btom">
+
+                  <!-- <tr class="table_border_btom">
                       <th scope="row">dummy Name </th>
                       <td class="py-3">02:00</td>
                       <td class="py-3">02:00</td>
@@ -104,8 +102,8 @@
                             <td>
                               <button type="button" class="btn over-due-bg-color text-center text-white mx-auto d-block my-2" data-toggle="modal" data-target="#DeleteModel">Delete</button>
                             </td>
-                          </tr>
->>>>>>> 5fdd894ca559158e81aa283de97a23af07f6dab3
+                          </tr> -->
+
                 </tbody>
               </table>
 
@@ -148,11 +146,16 @@
                     <form class="container" method="post" #slaForm="ngForm"  (ngSubmit)="create(slaForm)">
                       <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Name :</label>
-                        <input type="text" class="form-control" id="recipient-name" name="slaname" #slaname="ngModel" [ngModel]="slaService.selectedSla.slaname" placeholder="Name" >
+                        <input type="text" class="form-control" id="recipient-name" name="slaname" #slaname="ngModel" [ngModel]="slaservice.selectedSla.slaname" placeholder="Name" >
                       </div>
                       <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Name :</label>
-                        <input type="number" class="form-control" name="Layer_id" #Layer_id="ngModel" [ngModel]="slaService.selectedSla.Layer_id" placeholder="Layer_id" >
+
+                          <label for="inputState">Layer</label>
+                          <select id="layer" class="form-control" [(ngModel)]="selectedValue" name="Layer_id" (ngModelChange)="layerChanged($event)">
+                          <option *ngFor="let item of layers " [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
+                         </select>
+                        <!-- <label for="recipient-name" class="col-form-label">Name :</label>
+                        <input type="number" class="form-control" name="Layer_id" #Layer_id="ngModel" [ngModel]="slaservice.selectedSla.Layer_id" placeholder="Layer_id" > -->
                       </div>
                     
                       <!-- <div class="form-check form-check-inline pr-4 pb-4" *ngFor="let item of layers;let i=index">
@@ -170,19 +173,19 @@
                       <div class="form-group row">
                           <label for="inputEmail1" class="col-sm-3 col-form-label">Time 1</label>
                           <div class="col-sm-9">
-                            <input  class="form-control" id="inputEmail1" placeholder="Enter a time" name="l1time" #l1time="ngModel" [ngModel]="slaService.selectedSla.l1time">
+                            <input  class="form-control" id="inputEmail1" placeholder="Enter a time" name="l1time" #l1time="ngModel" [ngModel]="slaservice.selectedSla.l1time">
                           </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail2" class="col-sm-3 col-form-label">Time 2</label>
                             <div class="col-sm-9">
-                              <input  class="form-control" id="inputEmail2" placeholder="Enter a time" name="l2time" #l2time="ngModel" [ngModel]="slaService.selectedSla.l2time">
+                              <input  class="form-control" id="inputEmail2" placeholder="Enter a time" name="l2time" #l2time="ngModel" [ngModel]="slaservice.selectedSla.l2time">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">Time 3</label>
                             <div class="col-sm-9">
-                              <input  class="form-control" id="inputEmail3" placeholder="Enter a time" name="l3time" #l3time="ngModel" [ngModel]="slaService.selectedSla.l3time">
+                              <input  class="form-control" id="inputEmail3" placeholder="Enter a time" name="l3time" #l3time="ngModel" [ngModel]="slaservice.selectedSla.l3time">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -209,47 +212,57 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form class="container">
+                    <form class="container" #updateForm="ngForm" (ngSubmit)="updateSla(updateForm)">
                       <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Name :</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                        <input type="text" class="form-control" id="recipient-name" name="slaname" #slaname="ngModel" [(ngModel)]="slaservice.oldSla.slaname" >
                       </div>
-                      <div class="form-check form-check-inline pr-4 pb-4">
-                          <input type="checkbox" aria-label="Checkbox for following text input">
-                        <label for="message-text" class="mr-2 col-form-label">Layer1</label>
-                      </div>
-                      <div class="form-check form-check-inline pr-4 pb-4">
+
+
+                      <div class="form-check form-check-inline pr-4 pb-4" >
+
+                          <label for="inputState">Layer</label>
+                         <select id="layer" class="form-control" [(ngModel)]="selectedValue" name="Layer_id" (ngModelChange)="layerChanged($event)">
+                         <option *ngFor="let item of layers " [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
+                        </select>
+                        </div>
+                          <!-- <input type="checkbox" aria-label="Checkbox for following text input" name="Layer_id" #Layer_id="ngModel" [(ngModel)]="slaservice.oldSla.Layer_id" >
+                        <label for="message-text" class="mr-2 col-form-label"></label> -->
+                      
+                      <!-- <div class="form-check form-check-inline pr-4 pb-4">
                           <input type="checkbox" aria-label="Checkbox for following text input">
                         <label for="message-text" class="mr-2 col-form-label">Layer2</label>
                       </div>
                       <div class="form-check form-check-inline pr-4 pb-4">
                           <input type="checkbox" aria-label="Checkbox for following text input">
                         <label for="message-text" class="mr-2 col-form-label">Layer3</label>
-                      </div>
+                      </div> -->
                       <div class="form-group row">
                           <label for="inputEmail1" class="col-sm-3 col-form-label">Time 1</label>
                           <div class="col-sm-9">
-                            <input  class="form-control" id="inputEmail1" placeholder="Enter a time">
+                            <input  class="form-control" id="inputEmail1" placeholder="Enter a time" name="time" #time="ngModel" [(ngModel)]="slaservice.oldSla.time">
                           </div>
                         </div>
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label for="inputEmail2" class="col-sm-3 col-form-label">Time 2</label>
                             <div class="col-sm-9">
-                              <input  class="form-control" id="inputEmail2" placeholder="Enter a time">
+                              <input  class="form-control" id="inputEmail2" placeholder="Enter a time" name="l2time" #l2time="ngModel" [(ngModel)]="slaservice.oldSla.l2time">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">Time 3</label>
                             <div class="col-sm-9">
-                              <input  class="form-control" id="inputEmail3" placeholder="Enter a time">
+                              <input  class="form-control" id="inputEmail3" placeholder="Enter a time" name="l3time" #l3time="ngModel" [(ngModel)]="slaservice.oldSla.l3time">
                             </div>
+                        </div> -->
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn open-bg-color text-white">Update</button>
                         </div>
                     </form>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn open-bg-color text-white">Create</button>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -270,13 +283,11 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn open-bg-color" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn over-due-bg-color text-white">Delete</button>
+                    <button type="button" class="btn over-due-bg-color text-white" (click)="deleteSla()">Delete</button> 
                   </div>
                 </div>
               </div>
             </div>
-
-
 
         </div>
     </div>

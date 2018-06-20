@@ -8,11 +8,12 @@ import { RegisterComponent } from './register/register.component';
 import { SlaComponent } from './sla/sla.component';
 import { Register2Component } from './register2/register2.component';
 import { ProfileComponent } from "src/app/profile/profile.component";
-import { AuthGuard } from "src/app/auth/auth.guard";
+
 
 export const appRoutes:Routes=[
     {path:"",component:LoginComponent},
-    {path:"Dashboard/profile",component:ProfileComponent},
+    
+   // {path:"Dashboard/profile",component:ProfileComponent,canActivate:[AuthGuard]},
    // {
      {path:"Tickets",component:TicketsComponent},
      {path:"dashboard",component:DashboardComponent},
@@ -20,7 +21,7 @@ export const appRoutes:Routes=[
      {path:"",component:LoginComponent},
      {path:"profile",component:ProfileComponent},
      {path:"sla",component:SlaComponent},
-     {path:"register",component:RegisterComponent},
+    // {path:"register",component:RegisterComponent},
      {path:"register2",component:Register2Component}
 ];
     
