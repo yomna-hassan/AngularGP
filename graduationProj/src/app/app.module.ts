@@ -38,9 +38,15 @@ import { MessageServiceService } from'src/app/message-service.service'
 import { ProfileComponent } from 'src/app/profile/profile.component';
 import { SlaComponent } from './sla/sla.component';
 import { RegisterComponent } from './register/register.component';
+<<<<<<< HEAD
 import { SignalRModule } from 'ng2-signalr';
 import { SignalRConfiguration } from 'ng2-signalr';
 import { Register2Component } from './register2/register2.component';
+=======
+import { Register2Component } from './register2/register2.component';
+import { ProfilDataComponent } from './profil-data/profil-data.component';
+import { SidebarDisbatureComponent } from './sidebar-disbature/sidebar-disbature.component';
+>>>>>>> 951dcdb3b037cafa1e734e93027c3488727f52b4
 
 
 // const routers:Routes =[
@@ -88,6 +94,12 @@ import { Register2Component } from './register2/register2.component';
     ProfileComponent,
     SlaComponent,
     RegisterComponent,
+<<<<<<< HEAD
+=======
+    Register2Component,
+    ProfilDataComponent,
+    SidebarDisbatureComponent,
+>>>>>>> 951dcdb3b037cafa1e734e93027c3488727f52b4
     Register2Component
   ],
   imports: [
@@ -98,7 +110,10 @@ import { Register2Component } from './register2/register2.component';
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
   entryComponents: [AppComponent],
+<<<<<<< HEAD
 
+=======
+>>>>>>> 951dcdb3b037cafa1e734e93027c3488727f52b4
   providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,MessageServiceService],
   bootstrap: [AppComponent]
 })
