@@ -22,6 +22,10 @@ import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TicketserviceService } from 'src/app/ticketservice.service';
 import { Router } from '@angular/router/src/router';
+import { MessageServiceService } from'src/app/message-service.service'
+
+//import { SignalRModule} from 'ng2-signalr';
+//import { SignalRConfiguration } from 'ng2-signalr';
 
 
  //const routers:Routes =[
@@ -35,6 +39,9 @@ import { ProfileComponent } from 'src/app/profile/profile.component';
 import { SlaComponent } from './sla/sla.component';
 import { RegisterComponent } from './register/register.component';
 import { Register2Component } from './register2/register2.component';
+import { ProfilDataComponent } from './profil-data/profil-data.component';
+import { SidebarDisbatureComponent } from './sidebar-disbature/sidebar-disbature.component';
+
 
 // const routers:Routes =[
 //   {path:"",component:LoginComponent},
@@ -81,6 +88,9 @@ import { Register2Component } from './register2/register2.component';
     ProfileComponent,
     SlaComponent,
     RegisterComponent,
+    Register2Component,
+    ProfilDataComponent,
+    SidebarDisbatureComponent,
     Register2Component
   ],
   imports: [
@@ -91,7 +101,8 @@ import { Register2Component } from './register2/register2.component';
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
   entryComponents: [AppComponent],
-  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService],
+  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,MessageServiceService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
