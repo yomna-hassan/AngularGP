@@ -22,6 +22,10 @@ import { TechnitianserviceService } from 'src/app/technitianservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TicketserviceService } from 'src/app/ticketservice.service';
 import { Router } from '@angular/router/src/router';
+import { MessageServiceService } from'src/app/message-service.service'
+
+//import { SignalRModule} from 'ng2-signalr';
+//import { SignalRConfiguration } from 'ng2-signalr';
 
 
  //const routers:Routes =[
@@ -34,6 +38,8 @@ import { AuthGuard } from 'src/app/auth/auth.guard';
 import { ProfileComponent } from 'src/app/profile/profile.component';
 import { SlaComponent } from './sla/sla.component';
 import { RegisterComponent } from './register/register.component';
+import { SignalRModule } from 'ng2-signalr';
+import { SignalRConfiguration } from 'ng2-signalr';
 
 // const routers:Routes =[
 //   {path:"",component:LoginComponent},
@@ -79,7 +85,7 @@ import { RegisterComponent } from './register/register.component';
     NavbarComponent,
     ProfileComponent,
     SlaComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,7 +95,8 @@ import { RegisterComponent } from './register/register.component';
     HttpModule,HttpClientModule,ReactiveFormsModule
   ],
   entryComponents: [AppComponent],
-  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,AuthGuard],
+  providers: [SlaserviceService,LayerserviceService,UserserviceService,TechnitianserviceService,AuthGuard,MessageServiceService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

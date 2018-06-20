@@ -14,6 +14,11 @@ import { Router } from '@angular/router';
 import { Ticket } from '../ticket';
 import { NgForm } from '@angular/forms';
 import { TicketTechnician } from 'src/app/ticket-technician';
+import { MessageServiceService } from 'src/app/message-service.service';
+import { TransporterService } from 'src/app/transporter.service';
+
+
+var prox;
 
 @Component({
   selector: 'app-tickets',
@@ -27,7 +32,9 @@ export class TicketsComponent implements OnInit {
     private layerservice:LayerserviceService,
     private technitianservice:TechnitianserviceService,
     private ticketservice:TicketserviceService,
-    private router:Router) { }
+    private router:Router,
+    private messageservice:MessageServiceService,
+    private transporterservice:TransporterService) {}
 
   slas:Sla[]=[];
   layers:Layer[]=[];
@@ -37,6 +44,8 @@ export class TicketsComponent implements OnInit {
   ticketTechniciansOpened:TicketTechnician[]=[];
   ticketTechniciansOverdue:TicketTechnician[]=[];
   ticketTechniciansDone:TicketTechnician[]=[];
+  mssgText:string="";
+  techTicket:Ticket;
 
 
 
@@ -108,20 +117,23 @@ export class TicketsComponent implements OnInit {
 
 
   //newTicket:Ticket=new Ticket("first","helllo","ahmed",4);
-  create(form:NgForm){
+ create(form:NgForm){
     //alert(JSON.stringify(this.newTicket));
     //this.technicianid,
     this.ticketservice.postTicket(form.value,this.UserId).subscribe(
       d=>{
-        alert(JSON.stringify(d));
-        console.log(d); 
+        //alert(JSON.stringify(d));
+        console.log(d);
+        this.transporterservice.set(d);
+         this.techTicket=d;
         //this.tickets.push(d.JSON());
-        this.router.navigate(['./Tickets']);
+        //this.router.navigate(['/profile']);
 
-      }
-      
-    )
+      });
+  }
 
+  crreate(){
+    this.messageservice.startConnection();
   }
 
   loadTickets(){
@@ -132,7 +144,9 @@ export class TicketsComponent implements OnInit {
     )
   }
 
+  
 
+ 
   
 
   ngOnInit() {
@@ -140,6 +154,24 @@ export class TicketsComponent implements OnInit {
     this.loadOpened();
     this.loadOverdue();
     this.loadDone();
+     /* $(function(){
+      var con=$.hubConnection();
+      con.url="http://localhost:50941";
+      prox=con.createHubProxy("notificationHub");
+      con.start();
+      //subscribe
+      prox.on("newMessage",function(m){
+        $("ul").append("<li>"+m+"</li>");
+        //
+      })
+      $("#btn").on("click",send);
+    }) 
+    function send(){
+      prox.invoke("sendMessage",$("#test").val());
+    } */
+
+    
+ 
 
   //   $(document).ready(function(){
   //     $(".open-border-color").hover(function() {

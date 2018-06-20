@@ -31,10 +31,9 @@
               "src/sass/styles.scss"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "./node_modules/signalr/jquery.signalR.min.js"
-              
+              "F:/AngularGP/graduationProj/node_modules/jquery/dist/jquery.min.js",
+              "F:/AngularGP/graduationProj/node_modules/signalr/jquery.signalR.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"  
             ]
           },
           "configurations": {

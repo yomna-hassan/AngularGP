@@ -1,9 +1,13 @@
+<head>
+
+</head>
 <body class="fixed-nav sticky-footer pb-5 bg-bety" id="page-top">
 <!-- <div class="bg-bety"> -->
 
     <app-sidebar></app-sidebar>
     <app-navbar></app-navbar>
 
+    
     <div class="col-10 px-0 ml-auto">
 
           <div class="container">
@@ -42,6 +46,7 @@
                           </div>
                       </div>
                 </a>
+                
 
 
 
@@ -84,6 +89,13 @@
 
 
                 <!-- Onhold Ticket -->
+                <!-- <div>
+                  <input type="text" id="test" name="msg" #msg="ngModel" [(ngModel)]="messageservice.msg">
+                </div>
+                <input type="button" value="click" id="btn" (click)="crreate()">
+                <input type="button" value="click2" id="btn2">
+                <ul></ul> -->
+            
                 
                 <div class="tab-pane active  mb-4" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 
@@ -287,7 +299,7 @@
                               <input type="number" class="form-control" name="Ticket_Id" #Ticket_Id="ngModel" [ngModel]="ticketservice.selectedTicket.Ticket_Id" placeholder="Id">
                             </div>
                           <div class="pb-3"> 
-                            <input type="text" class="form-control" name="Ticket_Name" #Ticket_Name="ngModel" [ngModel]="ticketservice.selectedTicket.Ticket_Name" placeholder="Name">
+                            <input type="text" class="form-control" name="Ticket_Name" #TicketName="ngModel" [ngModel]="ticketservice.selectedTicket.Ticket_Name" placeholder="Name">
                           </div>
                        
                          
@@ -309,35 +321,34 @@
                           <!-- <div class="pb-3">
                             <input type="number" class="form-control" name="SLA_id" #SLA_id="ngModel" [ngModel]="ticketservice.selectedTicket.SLA_id" placeholder="SLA_id">
                           </div>  -->
-
-
+  
+                      </div>
+                      <div class="pb-3">
+                        <input type="text" class="form-control" name="UserId" #Id="ngModel" [ngModel]="UserId" placeholder="technician">
+                      </div> 
+                       
+    
+                      <div class="form-group col-md-10">
+                          <label for="inputState">Layer</label>
+                          <select id="layer" class="form-control" ngModel="selectedValue" name="Layer_Id" (ngModelChange)="layerChanged($event)">
+                            <option *ngFor="let item of layers" [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
                           
-                            
+                          </select>
+                      </div>
+    
+                      <div class="form-group col-md-10">
+                        <label for="inputState">Technician</label>
+                        <select id="technician" class="form-control" ngModel="selectedValue" name="Id" (ngModelChange)="technicianChanged($event)">
+                          <option *ngFor="let item of technicians " [ngValue]="item.Id">{{item.UserName}}</option>
+                        </select>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn open-bg-color text-white">Create</button>
                     </div>
+
                   </form>   
-                  <div class="pb-3">
-                    <input type="text" class="form-control" name="UserId" #Id="ngModel" [ngModel]="UserId" placeholder="technician">
-                  </div> 
-                   
-
-                  <div class="form-group col-md-10">
-                      <label for="inputState">Layer</label>
-                      <select id="layer" class="form-control" ngModel="selectedValue" name="Layer_Id" (ngModelChange)="layerChanged($event)">
-                        <option *ngFor="let item of layers" [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
-                      
-                      </select>
-                  </div>
-
-                  <div class="form-group col-md-10">
-                    <label for="inputState">Technician</label>
-                    <select id="technician" class="form-control" ngModel="selectedValue" name="Id" (ngModelChange)="technicianChanged($event)">
-                      <option *ngFor="let item of technicians " [ngValue]="item.Id">{{item.UserName}}</option>
-                    </select>
-                  </div>
+                  
                   
                  
                   
@@ -396,15 +407,5 @@
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
 
 </body>
