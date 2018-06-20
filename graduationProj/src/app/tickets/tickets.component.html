@@ -1,9 +1,13 @@
+<head>
+
+</head>
 <body class="fixed-nav sticky-footer pb-5 bg-bety" id="page-top">
 <!-- <div class="bg-bety"> -->
 
     <app-sidebar></app-sidebar>
     <app-navbar></app-navbar>
 
+    
     <div class="col-10 px-0 ml-auto">
 
           <div class="container">
@@ -42,6 +46,7 @@
                           </div>
                       </div>
                 </a>
+                
 
 
 
@@ -84,6 +89,13 @@
 
 
                 <!-- Onhold Ticket -->
+                <!-- <div>
+                  <input type="text" id="test" name="msg" #msg="ngModel" [(ngModel)]="messageservice.msg">
+                </div>
+                <input type="button" value="click" id="btn" (click)="crreate()">
+                <input type="button" value="click2" id="btn2">
+                <ul></ul> -->
+            
                 
                 <div class="tab-pane active  mb-4" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 
@@ -332,8 +344,13 @@
                               <span class="text-danger" *ngIf="TechId.valid && TechId.touched">Layer Id required</span>
                             </div>
 
-                          
-                            
+                      </div>
+    
+                      <div class="form-group col-md-10">
+                        <label for="inputState">Technician</label>
+                        <select id="technician" class="form-control" ngModel="selectedValue" name="Id" (ngModelChange)="technicianChanged($event)">
+                          <option *ngFor="let item of technicians " [ngValue]="item.Id">{{item.UserName}}</option>
+                        </select>
                       </div>
                           
                       <!-- <div class="pb-3">
@@ -361,6 +378,7 @@
                         <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn open-bg-color text-white" data-dismiss="modal"  [disabled]="!ticketForm.valid">Create</button>
                     </div>
+
                   </form>   
                  
                   
@@ -421,15 +439,5 @@
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
 
 </body>

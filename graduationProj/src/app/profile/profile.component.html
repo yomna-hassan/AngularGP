@@ -128,7 +128,7 @@
                         </div>
                         <div class="modal-body">
                           <div class=" d-flex flex-column">
-                              <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
+                              <div><span  class="open-font-color font-weight-bold">Name :</span><span>{{techHoldTickets.Ticket_Name}}</span></div>
                               <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
                               <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
                           </div>
@@ -169,136 +169,127 @@
 
 
 
-                <div class=" m-5" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                
-                    <div class="head_line open-font-color mb-3">Opened Tickets</div>
-                    <table class="table table-scroll" >
+
+                <div class="container">
+                    <div class="container d- flex flex-wrap nav py-5 my-4  nav-pills bg-white" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link p-2 active " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            <div class="">
+                                <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                                    <div class="card-body inner-border on-hold-bg-color bg-size-ticketpg  d-flex text-success">
+                                       <img src="../../assets/imgs/onhold icon.png">
+                                       <div class="ml-auto text-right text-white">On hold</div>
+                                    </div>
+                                    <div class="card-footer on-hold-font-color ">
+                                        <span class="float-left">{{techHoldTickets.length}}</span>
+                                        <span class="float-right">Tickets</span>
+                                    </div>
+                                  </div>
+                              </div>
+                        </a>
+        
+        
+        
+                        <a class="nav-link p-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                            <div class="">
+                                <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                                    <div class="card-body inner-border open-bg-color bg-size-ticketpg  d-flex text-success">
+                                       <img src="../../assets/imgs/opened icon.png">
+                                       <div class="ml-auto text-right text-white">Opened</div>
+                                    </div>
+                                    <div class="card-footer open-font-color ">
+                                        <span class="float-left">{{techOpenedTickets.length}}</span>
+                                        <span class="float-right">Tickets</span>
+                                    </div>
+                                  </div>
+                              </div>
+                        </a>
+                        </div>
+                        <div class="tab-content" id="v-pills-tabContent">
+                             <!--On hold-->
+                        <div class="tab-pane active  mb-4" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">                
+                          <div class="head_line open-font-color mb-3">Hold Tickets</div>
+                          <table class="table table-scroll" >
                         
-                        <thead class="thead-light text-uppercase font-weight-bold">
-                            <tr class="d-flex">
+                            <thead class="thead-light text-uppercase font-weight-bold">
+                              <tr class="d-flex">
                               
-                              <th class="col-3" scope="col">Assingned to</th>
-                              <th class="col-4" scope="col">date</th>
-                              <th class="col-5" scope="col">sla</th>
-                            </tr>
-                          </thead>
-                        <tbody class="bg_table text-dark">
+                                <th class="col-3" scope="col">Assingned to</th>
+                                <th class="col-4" scope="col">Details</th>
+                                <th class="col-5" scope="col">Description</th>
+                              </tr>
+                            </thead>
+                            <tbody class="bg_table text-dark">
 
-                            <tr class="table_border_btom d-flex">
-                                <td class="col-3 pl-4">
-                                    <div class=" media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
-                                        <div class="media-body align-self-center ">
-                                            <span class="align-middle">no1</span>
-                                          </div>
+                              <tr class="table_border_btom d-flex" *ngFor="let item of techHoldTickets">
+                                  <td class="col-3 pl-4">
+                                      <div class=" media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                          <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
+                                          <div class="media-body align-self-center ">
+                                              <span class="align-middle">{{item.Ticket_Id}}</span>
+                                            </div>
                                       </div>
                                   
-                                </td>
-                                <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                    <div >
-                                      
-                                    </div>
-                                </td>
-                                <td class="col-5  pr-5" colspan="2">
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                </td>
-                                
-                              </tr>
-
-
-
-
-                              
-                            <tr class="table_border_btom d-flex">
-                                <td class="col-3 pl-4">
-                                    <div class=" media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
-                                        <div class="media-body align-self-center ">
-                                            <span class="align-middle">no1</span>
-                                          </div>
+                                   </td>
+                                   <td class="col-4 d-flex flex-column" colspan="2">
+                                      <div><span  class="open-font-color font-weight-bold">Name :</span><span>{{item.Ticket_Name}}</span></div>
+                                      <div><span  class="open-font-color font-weight-bold">Client :</span><span>{{item.ClientName}}</span></div>
+                                      <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                      <div >
+                                        <button type="button" class="btn open-bg-color text-white" (click)="acceptTicket(item)">Accept</button>
                                       </div>
-                                  
-                                </td>
-                                <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                    <div >
-                                      
-                                    </div>
-                                </td>
-                                <td class="col-5  pr-5" colspan="2">
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                </td>
+                                    </td>
+                                     <td class="col-5  pr-5" colspan="2">
+                                        {{item.Description}}
+                                    </td>
                                 
                               </tr>
-
-
-
-                              
-                            <tr class="table_border_btom d-flex">
-                                <td class="col-3 pl-4">
-                                    <div class="media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                        <div class="m-auto">
-                                          <!-- <a routerLink="profile"> -->
-                                            <img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image">
-                                          <!-- </a> -->
-                                          </div>
-                                        <div class="media-body align-self-center ">
-                                            <span class="align-middle">no1</span>
-                                          </div>
-                                      </div>
-                                  
-                                </td>
-                                <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                    <div >
-                                    </div>
-                                </td>
-                                <td class="col-5 pr-5" colspan="2">
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                </td>
-                                
-                              </tr>
-
-
-                              
-                            <tr class="table_border_btom d-flex">
-                                <td class="col-3 pl-4">
-                                    <div class="media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
-                                        <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
-                                        <div class="media-body align-self-center ">
-                                            <span class="align-middle">no1</span>
-                                          </div>
-                                      </div>
-                                  
-                                </td>
-                                <td class="col-4 d-flex flex-column" colspan="2">
-                                    <div><span  class="open-font-color font-weight-bold">Name :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Client :</span><span>name_here</span></div>
-                                    <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
-                                    <div >
-                                     
-                                    </div>
-                                </td>
-                                <td class="col-5  pr-5" colspan="2">
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                </td>
-                                
-                              </tr>
-
-
-                          
-                            
                         </tbody>
                       </table>
                       
                 </div>
+                <div class="tab-pane fade mb-4" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="head_line open-font-color mb-3">Opened Tickets</div>
+                    <table class="table table-scroll" >
+                        
+                        <thead class="thead-light text-uppercase font-weight-bold">
+                          <tr class="d-flex">
+                          
+                            <th class="col-3" scope="col">Assingned to</th>
+                            <th class="col-4" scope="col">Details</th>
+                            <th class="col-5" scope="col">Description</th>
+                          </tr>
+                        </thead>
+                        <tbody class="bg_table text-dark">
+
+                          <tr class="table_border_btom d-flex" *ngFor="let item of techOpenedTickets">
+                              <td class="col-3 pl-4">
+                                  <div class=" media py-3 open-border-color w-50 mr-auto d-flex flex-column justify-content-center">
+                                      <div class="m-auto"><img class="ticket_img" src="../../assets/imgs/ticketopened2.png" alt="Generic placeholder image"></div>
+                                      <div class="media-body align-self-center ">
+                                          <span class="align-middle">{{item.Ticket_Id}}</span>
+                                        </div>
+                                  </div>
+                              
+                               </td>
+                               <td class="col-4 d-flex flex-column" colspan="2">
+                                  <div><span  class="open-font-color font-weight-bold">Name :</span><span>{{item.Ticket_Name}}</span></div>
+                                  <div><span  class="open-font-color font-weight-bold">Client :</span><span>{{item.ClientName}}</span></div>
+                                  <div><span  class="open-font-color font-weight-bold">Date :</span><span>date_here</span></div>
+                                  <div >
+                                    <button type="button" class="btn open-bg-color text-white" (click)="DoneTicket(item)">Done</button>
+                                  </div>
+                                </td>
+                                 <td class="col-5  pr-5" colspan="2">
+                                    {{item.Description}}
+                                </td>
+                            
+                          </tr>
+                    </tbody>
+                  </table>
+                
+                </div>
+                </div>
+               </div>
               
 
 
