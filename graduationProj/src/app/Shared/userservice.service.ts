@@ -70,7 +70,7 @@ registerUser(user : user, roles:string[]){
     Email:user.Email,
     Password:user.Password,
     ConfirmPassword:user.ConfirmPassword,
-    Layer_Id:user.Layer_Id,
+    Layer_Id:user.Layer_id,
     Roles:roles,
 
     

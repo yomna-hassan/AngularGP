@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
         console.log(data)
       localStorage.setItem('userToken',data.access_token);
       localStorage.setItem('userRoles',data.role);
-      alert("ok");
+      //alert("ok");
       this.router.navigate(['dashboard'])
         }, 
       err=>{

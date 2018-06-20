@@ -43,6 +43,7 @@ import { ProfilDataComponent } from './profil-data/profil-data.component';
 import { SidebarDisbatureComponent } from './sidebar-disbature/sidebar-disbature.component';
 
 
+
 // const routers:Routes =[
 //   {path:"",component:LoginComponent},
 //   {path:"Dashboard/Tickets",component:TicketsComponent},
@@ -88,7 +89,6 @@ import { SidebarDisbatureComponent } from './sidebar-disbature/sidebar-disbature
     ProfileComponent,
     SlaComponent,
     RegisterComponent,
-    Register2Component,
     ProfilDataComponent,
     SidebarDisbatureComponent,
     Register2Component

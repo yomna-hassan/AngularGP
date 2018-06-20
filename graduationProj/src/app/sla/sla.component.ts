@@ -15,7 +15,14 @@ import { LayerSla } from 'src/app/layer-sla';
 export class SlaComponent implements OnInit {
 
  
-  constructor(private slaservice:SlaserviceService,private layerservice:LayerserviceService,private router:Router) { }
+  constructor(private slaservice:SlaserviceService,private layerservice:LayerserviceService,private router:Router) {
+    if(localStorage.getItem('userRoles')){
+      console.log(localStorage.getItem('userRoles'))
+    if(!localStorage.getItem('userRoles').includes('SuperAdmin')){
+      router.navigate(['login'])
+    }
+   }
+  }
   slas:Sla[]=[];
   deleteId:number;
   updateId:number;

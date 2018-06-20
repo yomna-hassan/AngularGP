@@ -26,5 +26,9 @@ export class TechnitianserviceService {
     return this.http.get("http://localhost:50941/api/Technician/3");
   }
 
+  getTechById(Id:string){
+    return this.http.get("http://localhost:50941/api/Technician/data/"+Id);
+  }
+
   
 }
