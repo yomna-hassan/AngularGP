@@ -14,8 +14,10 @@
            
             <!-- Icon Cards-->
             
-            <div class="container d- flex flex-wrap nav py-5 my-4  nav-pills bg-white" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link p-2 active " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+            <div class="d-flex flex-wrap nav py-5 my-4  nav-pills bg-white" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                
+              <div class="row mx-auto">
+              <a class="nav-link p-2 active " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
                     <div class="">
                         <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
                             <div class="card-body inner-border on-hold-bg-color bg-size-ticketpg  d-flex text-success">
@@ -83,7 +85,7 @@
                 </a>
 
 
-                
+              </div>
               </div>
               <div class="tab-content" id="v-pills-tabContent">
 
@@ -376,7 +378,8 @@
 
                       <div class="modal-footer">
                         <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn open-bg-color text-white" data-dismiss="modal"  [disabled]="!ticketForm.valid">Create</button>
+                        <button type="submit" class="btn open-bg-color text-white" data-dismiss="modal" 
+                         [disabled]="!ticketForm.valid">Create</button>
                     </div>
 
                   </form>   

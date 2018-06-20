@@ -119,3 +119,10 @@ body{
     background-size: cover;
     height: 100vh;
 }
+
+
+
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

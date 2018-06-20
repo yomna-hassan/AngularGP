@@ -1,2 +1,8 @@
 @import '../../sass/variables.scss';
 @import '../../sass/sidebar.scss';
+
+
+.nav-link:visited
+{
+    background-color: $component-active-bg;
+}

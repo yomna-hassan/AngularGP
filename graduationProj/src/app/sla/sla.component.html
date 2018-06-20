@@ -146,13 +146,15 @@
                     <form class="container" method="post" #slaForm="ngForm"  (ngSubmit)="create(slaForm)">
                       <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Name :</label>
-                        <input type="text" class="form-control" id="recipient-name" name="slaname" #slaname="ngModel" [ngModel]="slaservice.selectedSla.slaname" placeholder="Name" >
+                        <input type="text" class="form-control" id="recipient-name" name="slaname" #slaname="ngModel" [ngModel]="slaservice.selectedSla.slaname" placeholder="Name" required>
+                        <span class="text-danger" *ngIf="!slaname.valid &&slaname.touched">SLA name required</span>
                       </div>
                       <div class="form-group">
 
                           <label for="inputState">Layer</label>
-                          <select id="layer" class="form-control" [(ngModel)]="selectedValue" name="Layer_id" (ngModelChange)="layerChanged($event)">
+                          <select id="layer" class="form-control" [(ngModel)]="selectedValue" name="Layer_id" #LayerId="ngModel" (ngModelChange)="layerChanged($event)" required>
                           <option *ngFor="let item of layers " [ngValue]="item.Layer_id">{{item.Layer_name}}</option>
+                          <span class="text-danger" *ngIf="!LayerId.valid &&LayerId.touched">Layer Id required</span>
                          </select>
                         <!-- <label for="recipient-name" class="col-form-label">Name :</label>
                         <input type="number" class="form-control" name="Layer_id" #Layer_id="ngModel" [ngModel]="slaservice.selectedSla.Layer_id" placeholder="Layer_id" > -->
@@ -173,24 +175,27 @@
                       <div class="form-group row">
                           <label for="inputEmail1" class="col-sm-3 col-form-label">Time 1</label>
                           <div class="col-sm-9">
-                            <input  class="form-control" id="inputEmail1" placeholder="Enter a time" name="l1time" #l1time="ngModel" [ngModel]="slaservice.selectedSla.l1time">
+                            <input  class="form-control" id="inputEmail1" placeholder="Enter a time" name="l1time" #l1time="ngModel" [ngModel]="slaservice.selectedSla.l1time" required>
+                            <span class="text-danger" *ngIf="!l1time.valid && l1time.touched">layer 2 time required</span>
                           </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail2" class="col-sm-3 col-form-label">Time 2</label>
                             <div class="col-sm-9">
-                              <input  class="form-control" id="inputEmail2" placeholder="Enter a time" name="l2time" #l2time="ngModel" [ngModel]="slaservice.selectedSla.l2time">
+                              <input  class="form-control" id="inputEmail2" placeholder="Enter a time" name="l2time" #l2time="ngModel" [ngModel]="slaservice.selectedSla.l2time" required>
+                              <span class="text-danger" *ngIf="!l2time.valid && l2time.touched">layer 2 time required</span>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">Time 3</label>
                             <div class="col-sm-9">
-                              <input  class="form-control" id="inputEmail3" placeholder="Enter a time" name="l3time" #l3time="ngModel" [ngModel]="slaservice.selectedSla.l3time">
+                              <input  class="form-control" id="inputEmail3" placeholder="Enter a time" name="l3time" #l3time="ngModel" [ngModel]="slaservice.selectedSla.l3time" required>
+                              <span class="text-danger" *ngIf="!l3time.valid && l3time.touched">layer 3 time required</span>
                             </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn on-hold-bg-color text-white" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn open-bg-color text-white">Create</button>
+                          <button type="submit" class="btn open-bg-color text-white" [disabled]="!slaForm.valid">Create</button>
                         </div>
                     </form>
                   </div>

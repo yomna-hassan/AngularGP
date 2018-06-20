@@ -10,75 +10,76 @@
              
               <!-- Icon Cards-->
               
-              <div class="container d- flex flex-wrap nav py-5 my-4  nav-pills bg-white" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                  <a class="nav-link p-2 active " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                      <div class="">
-                          <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
-                              <div class="card-body inner-border on-hold-bg-color bg-size-ticketpg  d-flex text-success">
-                                 <img src="../../assets/imgs/onhold icon.png">
-                                 <div class="ml-auto text-right text-white">On hold</div>
-                              </div>
-                              <div class="card-footer on-hold-font-color ">
-                                  <span class="float-left">{{ticketTechniciansOnhold.length}}</span>
-                                  <span class="float-right">Tickets</span>
-                              </div>
-                            </div>
-                        </div>
-                  </a>
+              <div class=" d-flex flex-wrap nav py-5 my-4  nav-pills bg-white" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="row mx-auto">
+                        <a class="nav-link p-2 active " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            <div class="">
+                                <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                                    <div class="card-body inner-border on-hold-bg-color bg-size-ticketpg  d-flex text-success">
+                                        <img src="../../assets/imgs/onhold icon.png">
+                                        <div class="ml-auto text-right text-white">On hold</div>
+                                    </div>
+                                    <div class="card-footer on-hold-font-color ">
+                                        <span class="float-left">{{ticketTechniciansOnhold.length}}</span>
+                                        <span class="float-right">Tickets</span>
+                                    </div>
+                                    </div>
+                                </div>
+                        </a>
+        
+        
+        
+                        <a class="nav-link p-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                            <div class="">
+                                <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                                    <div class="card-body inner-border open-bg-color bg-size-ticketpg  d-flex text-success">
+                                        <img src="../../assets/imgs/opened icon.png">
+                                        <div class="ml-auto text-right text-white">Opened</div>
+                                    </div>
+                                    <div class="card-footer open-font-color ">
+                                        <span class="float-left">{{ticketTechniciansOpened.length}}</span>
+                                        <span class="float-right">Tickets</span>
+                                    </div>
+                                    </div>
+                                </div>
+                        </a>
+        
+        
+        
+        
+                        <a class="nav-link p-2" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                            <div class="">
+                                <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                                    <div class="card-body inner-border over-due-bg-color bg-size-ticketpg  d-flex text-success">
+                                        <img src="../../assets/imgs/overdueicon.png">
+                                        <div class="ml-auto text-right text-white">Overdue</div>
+                                    </div>
+                                    <div class="card-footer over-due-font-color ">
+                                        <span class="float-left">{{ticketTechniciansOverdue.length}}</span>
+                                        <span class="float-right">Tickets</span>
+                                    </div>
+                                    </div>
+                                </div>
+                        </a>
+        
+        
+                        <a class="nav-link p-2" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                            <div class="">
+                                <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                                    <div class="card-body inner-border done-bg-color bg-size-ticketpg  d-flex text-success">
+                                        <img src="../../assets/imgs/done icon.png">
+                                        <div class="ml-auto text-right text-white">Done</div>
+                                    </div>
+                                    <div class="card-footer done-font-color">
+                                        <span class="float-left">{{ticketTechniciansDone.length}}</span>
+                                        <span class="float-right">Tickets</span>
+                                    </div>
+                                    </div>
+                                </div>
+                        </a>
   
   
-  
-                  <a class="nav-link p-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                      <div class="">
-                          <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
-                              <div class="card-body inner-border open-bg-color bg-size-ticketpg  d-flex text-success">
-                                 <img src="../../assets/imgs/opened icon.png">
-                                 <div class="ml-auto text-right text-white">Opened</div>
-                              </div>
-                              <div class="card-footer open-font-color ">
-                                  <span class="float-left">{{ticketTechniciansOpened.length}}</span>
-                                  <span class="float-right">Tickets</span>
-                              </div>
-                            </div>
-                        </div>
-                  </a>
-  
-  
-  
-  
-                  <a class="nav-link p-2" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                      <div class="">
-                          <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
-                              <div class="card-body inner-border over-due-bg-color bg-size-ticketpg  d-flex text-success">
-                                 <img src="../../assets/imgs/overdueicon.png">
-                                 <div class="ml-auto text-right text-white">Overdue</div>
-                              </div>
-                              <div class="card-footer over-due-font-color ">
-                                  <span class="float-left">{{ticketTechniciansOverdue.length}}</span>
-                                  <span class="float-right">Tickets</span>
-                              </div>
-                            </div>
-                        </div>
-                  </a>
-  
-  
-                  <a class="nav-link p-2" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
-                      <div class="">
-                          <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
-                              <div class="card-body inner-border done-bg-color bg-size-ticketpg  d-flex text-success">
-                                 <img src="../../assets/imgs/done icon.png">
-                                 <div class="ml-auto text-right text-white">Done</div>
-                              </div>
-                              <div class="card-footer done-font-color">
-                                  <span class="float-left">{{ticketTechniciansDone.length}}</span>
-                                  <span class="float-right">Tickets</span>
-                              </div>
-                            </div>
-                        </div>
-                  </a>
-  
-  
-                  
+                    </div>
                 </div>
                 <div class="tab-content" id="v-pills-tabContent">
   

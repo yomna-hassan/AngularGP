@@ -1,7 +1,19 @@
 <body class="fixed-nav sticky-footer pb-5 bg-bety raleway p-0 m-0" id="page-top">
     <!-- <div class="bg-bety"> -->
     
-        <app-sidebar></app-sidebar>
+        
+    <div class="col-2 sidenave navbar-expand-lg position-fixed  bg-primarry p-0">
+
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+          <img class="w-50 text-center m-auto pr-1" src="../../assets/imgs/Beyti-logo-en-220-173.png">
+
+          <a class="nav-link p-3 border_bott_sidenav text-white" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" routerLink="/profile">profile</a> 
+
+
+
+        </div>
+      </div>
         
 
   
@@ -16,7 +28,7 @@
                        <div class="media">
                            <img class="align-self-end  mr-3" src="../../assets/imgs/Layer 4.png" alt="Generic placeholder image">
                              <div class="media-body align-self-center">
-                                 <h6 class="my-auto ">Loged in as Dispature</h6>
+                                 <h6 class="my-auto ">Loged in as Technicain</h6>
                              </div>
                          </div>
                  </div>
@@ -149,60 +161,62 @@
 
 
 
-
-               <div class="jumbotron jumbotronbg m-5 p-5">
                   <div class="container">
-                      <div class="media ">
-                          <img class="mr-3" src="../../assets/imgs/Layer 4.png" alt="Generic placeholder image">
-                          <div class="media-body row">
-                          <!-- <div class=" d-flex flex-coloum justify-content-around col-12"> -->
-                            <h6 class="mt-0 col-6"><span class="open-font-color font-weight-bold">Name :</span><span>mostafa shaban</span></h6>
-                            <h6 class="mt-0 col-6"><span class="open-font-color font-weight-bold">Layer :</span><span>mostafa shaban</span></h6>
-                          <!-- </div> -->
-                          <h6 class="mt-0 col-6 "><span class="open-font-color font-weight-bold">Number of tickets done : </span><span>mostafa shaban</span></h6>
+                    <div class="jumbotron jumbotronbg p-4">
+                        <div class="container">
+                            <div class="media ">
+                                <img class="mr-3" src="../../assets/imgs/Layer 4.png" alt="Generic placeholder image">
+                                <div class="media-body row">
+                                <!-- <div class=" d-flex flex-coloum justify-content-around col-12"> -->
+                                  <h6 class="mt-0 col-6"><span class="open-font-color font-weight-bold">Name :</span><span>mostafa shaban</span></h6>
+                                  <h6 class="mt-0 col-6"><span class="open-font-color font-weight-bold">Layer :</span><span>mostafa shaban</span></h6>
+                                <!-- </div> -->
+                                <h6 class="mt-0 col-6 "><span class="open-font-color font-weight-bold">Number of tickets done : </span><span>mostafa shaban</span></h6>
+                              </div>
+                                
+                              </div>
                         </div>
-                          
-                        </div>
-                  </div>
-                </div>
-
+                      </div>
+                    </div>
 
 
 
 
                 <div class="container">
                     <div class="container d- flex flex-wrap nav py-5 my-4  nav-pills bg-white" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link p-2 active " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                            <div class="">
-                                <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
-                                    <div class="card-body inner-border on-hold-bg-color bg-size-ticketpg  d-flex text-success">
-                                       <img src="../../assets/imgs/onhold icon.png">
-                                       <div class="ml-auto text-right text-white">On hold</div>
-                                    </div>
-                                    <div class="card-footer on-hold-font-color ">
-                                        <span class="float-left">{{techHoldTickets.length}}</span>
-                                        <span class="float-right">Tickets</span>
-                                    </div>
+                          <div class="row mx-auto">
+                            <a class="nav-link p-2 active " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                <div class="">
+                                    <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                                        <div class="card-body inner-border on-hold-bg-color bg-size-ticketpg  d-flex text-success">
+                                          <img src="../../assets/imgs/onhold icon.png">
+                                          <div class="ml-auto text-right text-white">On hold</div>
+                                        </div>
+                                        <div class="card-footer on-hold-font-color ">
+                                            <span class="float-left">{{techHoldTickets.length}}</span>
+                                            <span class="float-right">Tickets</span>
+                                        </div>
+                                      </div>
                                   </div>
-                              </div>
-                        </a>
-        
-        
-        
-                        <a class="nav-link p-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                            <div class="">
-                                <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
-                                    <div class="card-body inner-border open-bg-color bg-size-ticketpg  d-flex text-success">
-                                       <img src="../../assets/imgs/opened icon.png">
-                                       <div class="ml-auto text-right text-white">Opened</div>
-                                    </div>
-                                    <div class="card-footer open-font-color ">
-                                        <span class="float-left">{{techOpenedTickets.length}}</span>
-                                        <span class="float-right">Tickets</span>
-                                    </div>
+                            </a>
+            
+            
+            
+                            <a class="nav-link p-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                                <div class="">
+                                    <div class="card h-100 nav_bar_shadow" style="max-width: 18rem;">
+                                        <div class="card-body inner-border open-bg-color bg-size-ticketpg  d-flex text-success">
+                                          <img src="../../assets/imgs/opened icon.png">
+                                          <div class="ml-auto text-right text-white">Opened</div>
+                                        </div>
+                                        <div class="card-footer open-font-color ">
+                                            <span class="float-left">{{techOpenedTickets.length}}</span>
+                                            <span class="float-right">Tickets</span>
+                                        </div>
+                                      </div>
                                   </div>
-                              </div>
-                        </a>
+                            </a>
+                          </div>
                         </div>
                         <div class="tab-content" id="v-pills-tabContent">
                              <!--On hold-->
