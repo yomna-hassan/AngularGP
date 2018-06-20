@@ -7,7 +7,7 @@ export class user{
   public Email:string;
   public Password:string;
   public ConfirmPassword:string;
-  public Layer_Id:number;
+  public Layer_id:number;
 
 
 }

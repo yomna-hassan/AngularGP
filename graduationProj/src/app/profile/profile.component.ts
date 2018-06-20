@@ -4,6 +4,8 @@ import { TicketsComponent } from 'src/app/tickets/tickets.component';
 import { Ticket } from '../ticket';
 import { TransporterService } from 'src/app/transporter.service';
 import { TicketserviceService } from 'src/app/ticketservice.service';
+import { TechnitianserviceService } from 'src/app/technitianservice.service';
+import { user } from 'src/app/Shared/user';
 
 @Component({
   selector: 'app-profile',
@@ -13,9 +15,9 @@ import { TicketserviceService } from 'src/app/ticketservice.service';
 export class ProfileComponent implements OnInit {
   techHoldTickets:Ticket[]=[];
   techOpenedTickets:Ticket[]=[];
-  userId:string="99ef3b50-8496-4db4-8a5c-cb8a7ef6c835";
+  userId:string="f30dd8fa-84f9-41c2-a213-2b0f47014bb3";
 
-  constructor(private ticketservice:TicketserviceService) { }
+  constructor(private ticketservice:TicketserviceService,private technicianservice:TechnitianserviceService) { }
   
   getHoldTicketsById(Id:string){
     this.ticketservice.getHoldTicketsById(Id).subscribe(
@@ -37,6 +39,7 @@ export class ProfileComponent implements OnInit {
 oldTicket:Ticket;
 doneTicket:Ticket;
 undoneTicket:Ticket;
+technician:user;
 flag:number=0;
   acceptTicket(tick:Ticket){
     this.flag=0;
@@ -81,11 +84,21 @@ flag:number=0;
 
   }
 
+  GetTechnitianData(){
+    this.technicianservice.getTechById(this.userId).subscribe(
+      d=>{
+        //alert(JSON.stringify(d));
+        this.technician=d.json();
+      }
+    )
+  }
+
 
   
 
 
   ngOnInit() {
+    this.GetTechnitianData();
     this.getHoldTicketsById(this.userId);
     this.getOpenedTicketsById(this.userId);
 

@@ -68,7 +68,7 @@ export class Register2Component implements OnInit {
       }
 
       layerChanged(value){
-        this.userservice.user.Layer_Id=value;
+        this.userservice.user.Layer_id=value;
         this.layerid=value;
      }
       
